@@ -55,14 +55,14 @@ export default function ProductCard({
   // Home page layout with overlay details
   return (
     <div className={`group relative animate-fade-in-up ${delay}`}>
-      <div className="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200 shadow-2xl transition-all duration-500 group-hover:shadow-primary/20 group-hover:shadow-2xl">
+      <div className="aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-200 shadow-2xl transition-all duration-500 group-hover:shadow-primary/20 group-hover:shadow-2xl">
         <div className="relative overflow-hidden h-full">
           <Image
             alt={imageAlt}
             className="h-full w-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
             src={imageSrc}
-            width={400}
-            height={533}
+            width={300}
+            height={375}
           />
           
           {/* Product Details Overlay */}

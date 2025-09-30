@@ -28,18 +28,43 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-10"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent z-20"></div>
           
-          {/* Floating Perfume Particles */}
+          {/* Floating Perfume Essence Particles */}
           <div className="absolute inset-0 overflow-hidden z-30">
-            <div className="absolute top-20 left-10 w-4 h-4 bg-amber-300/30 rounded-full animate-float-particle"></div>
-            <div className="absolute top-40 right-20 w-3 h-3 bg-rose-300/40 rounded-full animate-float-particle delay-500"></div>
-            <div className="absolute bottom-40 left-20 w-5 h-5 bg-violet-300/25 rounded-full animate-float-particle delay-1000"></div>
-            <div className="absolute top-60 left-1/3 w-2 h-2 bg-emerald-300/35 rounded-full animate-float-particle delay-700"></div>
-            <div className="absolute bottom-60 right-1/3 w-4 h-4 bg-orange-300/30 rounded-full animate-float-particle delay-300"></div>
-            <div className="absolute top-1/3 right-10 w-3 h-3 bg-pink-300/40 rounded-full animate-float-particle delay-1200"></div>
+            {/* Jasmine Essence */}
+            <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-float-particle shadow-lg shadow-white/10"></div>
+            <div className="absolute top-20 left-12 w-2 h-2 bg-white/15 rounded-full animate-float-particle delay-200"></div>
+            
+            {/* Rose Essence */}
+            <div className="absolute top-40 right-20 w-3 h-3 bg-rose-200/30 rounded-full animate-float-particle delay-500 shadow-lg shadow-rose-200/20"></div>
+            <div className="absolute top-42 right-22 w-1 h-1 bg-rose-100/40 rounded-full animate-float-particle delay-700"></div>
+            
+            {/* Sandalwood Essence */}
+            <div className="absolute bottom-40 left-20 w-5 h-5 bg-amber-200/25 rounded-full animate-float-particle delay-1000 shadow-lg shadow-amber-200/15"></div>
+            <div className="absolute bottom-38 left-22 w-2 h-2 bg-amber-100/30 rounded-full animate-float-particle delay-1200"></div>
+            
+            {/* Bergamot Essence */}
+            <div className="absolute top-60 left-1/3 w-2 h-2 bg-yellow-200/35 rounded-full animate-float-particle delay-700 shadow-lg shadow-yellow-200/20"></div>
+            <div className="absolute top-62 left-1/3 w-1 h-1 bg-yellow-100/40 rounded-full animate-float-particle delay-900"></div>
+            
+            {/* Vanilla Essence */}
+            <div className="absolute bottom-60 right-1/3 w-4 h-4 bg-cream-200/30 rounded-full animate-float-particle delay-300 shadow-lg shadow-cream-200/15"></div>
+            <div className="absolute bottom-58 right-1/3 w-2 h-2 bg-cream-100/35 rounded-full animate-float-particle delay-500"></div>
+            
+            {/* Lavender Essence */}
+            <div className="absolute top-1/3 right-10 w-3 h-3 bg-violet-200/40 rounded-full animate-float-particle delay-1200 shadow-lg shadow-violet-200/20"></div>
+            <div className="absolute top-1/3 right-12 w-1 h-1 bg-violet-100/50 rounded-full animate-float-particle delay-1400"></div>
+            
+            {/* Oud Essence */}
+            <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-amber-800/20 rounded-full animate-float-particle delay-600 shadow-lg shadow-amber-800/10"></div>
+            <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-amber-700/25 rounded-full animate-float-particle delay-800"></div>
+            
+            {/* Musk Essence */}
+            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-gray-200/30 rounded-full animate-float-particle delay-1000 shadow-lg shadow-gray-200/15"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-gray-100/35 rounded-full animate-float-particle delay-1200"></div>
           </div>
           
           {/* Main Content */}
-          <div className="relative z-40 mx-auto max-w-5xl text-center text-white px-4">
+          <div className="relative z-30 mx-auto max-w-5xl text-center text-white px-4">
             <div className="animate-fade-in-up">
               <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
                 <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Luxury Fragrances</span>
@@ -80,13 +105,27 @@ export default function Home() {
         
         {/* Featured Collection Section */}
         <section id="products" className="py-20 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-          {/* Background Elements */}
+          {/* Perfume Essence Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl animate-float-slow"></div>
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-rose-500/5 rounded-full blur-3xl animate-float-reverse"></div>
+            {/* Jasmine Essence Cloud */}
+            <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+            <div className="absolute top-25 left-15 w-20 h-20 bg-white/3 rounded-full blur-2xl animate-float-slow delay-500"></div>
+            
+            {/* Rose Essence Cloud */}
+            <div className="absolute bottom-20 right-10 w-40 h-40 bg-rose-200/5 rounded-full blur-3xl animate-float-reverse"></div>
+            <div className="absolute bottom-25 right-15 w-24 h-24 bg-rose-100/3 rounded-full blur-2xl animate-float-reverse delay-300"></div>
+            
+            {/* Sandalwood Essence Cloud */}
+            <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-amber-200/4 rounded-full blur-3xl animate-float-slow delay-1000"></div>
+            
+            {/* Vanilla Essence Cloud */}
+            <div className="absolute bottom-1/3 left-1/4 w-36 h-36 bg-yellow-100/4 rounded-full blur-3xl animate-float-reverse delay-700"></div>
+            
+            {/* Lavender Essence Cloud */}
+            <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-violet-200/4 rounded-full blur-3xl animate-float-slow delay-1200"></div>
           </div>
           
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="text-center mb-20">
               <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/20 backdrop-blur-sm">
                 <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
@@ -100,7 +139,7 @@ export default function Home() {
               <div className="w-32 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mt-8 animate-fade-in-up delay-500"></div>
             </div>
             
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-12">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
               <ProductCard
                 name="Midnight Jasmine"
                 description="An intoxicating blend of jasmine sambac, sandalwood, and vanilla. A seductive fragrance that captures the essence of moonlit gardens."
@@ -127,6 +166,51 @@ export default function Home() {
                 imageAlt="Amber Mystique luxury perfume bottle"
                 delay="delay-300"
               />
+              
+              <ProductCard
+                name="Ocean Breeze"
+                description="A refreshing aquatic fragrance with marine notes, sea salt, and white florals. Perfect for those who love the ocean's embrace."
+                price="$165"
+                imageSrc="/yusuf-bhai.webp"
+                imageAlt="Ocean Breeze fresh perfume bottle"
+                delay="delay-400"
+              />
+              
+              <ProductCard
+                name="Spiced Amber"
+                description="A warm and exotic blend of amber, cinnamon, and vanilla. This luxurious fragrance evokes the essence of ancient spice routes."
+                price="$195"
+                imageSrc="/yusuf-bhai.webp"
+                imageAlt="Spiced Amber luxury perfume bottle"
+                delay="delay-500"
+              />
+              
+              <ProductCard
+                name="Floral Whisper"
+                description="A delicate bouquet of rose, jasmine, and lily of the valley. A feminine fragrance that whispers elegance and grace."
+                price="$175"
+                imageSrc="/yusuf-bhai.webp"
+                imageAlt="Floral Whisper elegant perfume bottle"
+                delay="delay-600"
+              />
+              
+              <ProductCard
+                name="Woodland Trail"
+                description="An earthy composition of cedarwood, pine, and moss. This masculine fragrance captures the essence of forest adventures."
+                price="$185"
+                imageSrc="/yusuf-bhai.webp"
+                imageAlt="Woodland Trail masculine perfume bottle"
+                delay="delay-700"
+              />
+              
+              <ProductCard
+                name="Desert Mirage"
+                description="A mysterious blend of oud, saffron, and sandalwood. This exotic fragrance transports you to distant desert landscapes."
+                price="$210"
+                imageSrc="/yusuf-bhai.webp"
+                imageAlt="Desert Mirage exotic perfume bottle"
+                delay="delay-800"
+              />
             </div>
             
             {/* Call to Action */}
@@ -141,7 +225,24 @@ export default function Home() {
         
         {/* About Section */}
         <section id="about" className="py-20 sm:py-32 bg-black relative overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Perfume Essence Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Oud Essence Cloud */}
+            <div className="absolute top-10 right-10 w-48 h-48 bg-amber-800/3 rounded-full blur-3xl animate-float-slow"></div>
+            <div className="absolute top-15 right-15 w-32 h-32 bg-amber-700/2 rounded-full blur-2xl animate-float-slow delay-800"></div>
+            
+            {/* Musk Essence Cloud */}
+            <div className="absolute bottom-10 left-10 w-40 h-40 bg-gray-200/3 rounded-full blur-3xl animate-float-reverse"></div>
+            <div className="absolute bottom-15 left-15 w-28 h-28 bg-gray-100/2 rounded-full blur-2xl animate-float-reverse delay-500"></div>
+            
+            {/* Jasmine Essence Cloud */}
+            <div className="absolute top-1/2 left-1/2 w-36 h-36 bg-white/2 rounded-full blur-3xl animate-float-slow delay-1200"></div>
+            
+            {/* Rose Essence Cloud */}
+            <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-rose-200/3 rounded-full blur-3xl animate-float-reverse delay-1000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
                 <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
