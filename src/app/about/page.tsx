@@ -42,7 +42,7 @@ export default function AboutPage() {
             </div>
             <div className="animate-fade-in-up delay-300">
               <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 leading-relaxed animate-typewriter">
-                At Aroma Essence, fragrance is more than a scent; it's an expression of individuality, a memory in the making, and a journey of the senses.
+                At Aroma Essence, fragrance is more than a scent; it&apos;s an expression of individuality, a memory in the making, and a journey of the senses.
               </p>
             </div>
             <div className="animate-fade-in-up delay-500">
@@ -70,7 +70,7 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Founded in 2010 by renowned perfumer, Isabella Rossi, Aroma Essence was born from a passion for creating exceptional fragrances that capture the essence of life's most precious moments. Inspired by nature's beauty and the art of perfumery, Isabella embarked on a mission to redefine luxury scents, blending traditional techniques with modern innovation.
+                  Founded in 2010 by renowned perfumer, Isabella Rossi, Aroma Essence was born from a passion for creating exceptional fragrances that capture the essence of life&apos;s most precious moments. Inspired by nature&apos;s beauty and the art of perfumery, Isabella embarked on a mission to redefine luxury scents, blending traditional techniques with modern innovation.
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <div className="h-1 w-16 bg-gradient-to-r from-primary to-orange-600 rounded-full"></div>

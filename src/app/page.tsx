@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductCard from "../components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -252,7 +251,7 @@ export default function Home() {
                   The Art of Perfumery
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  At Aroma Notes, we believe that fragrance is more than just a scent—it's an expression of personality, 
+                  At Aroma Notes, we believe that fragrance is more than just a scent—it&apos;s an expression of personality, 
                   a memory in a bottle, and a journey of the senses. Our master perfumers combine traditional techniques 
                   with innovative approaches to create unique olfactory experiences.
                 </p>
