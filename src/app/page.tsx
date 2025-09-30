@@ -66,26 +66,26 @@ export default function Home() {
           <div className="relative z-30 mx-auto max-w-5xl text-center text-white px-4">
             <div className="animate-fade-in-up">
               <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Luxury Fragrances</span>
+                <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Exclusive Imports</span>
               </div>
-              <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x">
+              <h1 className="text-5xl font-extrabold font-smooch tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x">
                 Aroma Notes
               </h1>
             </div>
             <div className="animate-fade-in-up delay-300">
-              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-200 leading-relaxed font-light">
+              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-200 leading-relaxed font-light font-poppins">
                 Where every scent tells a story. Discover our exclusive collection of artisanal perfumes, 
                 each bottle a masterpiece of olfactory artistry.
               </p>
             </div>
             <div className="mt-12 animate-fade-in-up delay-500">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="#products">
+                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="#products">
                   <span className="relative z-10">Explore Collection</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </a>
-                <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
+                <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold font-poppins text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
                   <span className="relative z-10">Our Story</span>
                 </a>
               </div>
@@ -129,10 +129,10 @@ export default function Home() {
               <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/20 backdrop-blur-sm">
                 <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
               </div>
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
+              <h2 className="text-4xl font-bold font-smooch tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
                 Masterpiece Fragrances
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed animate-fade-in-up delay-300">
+              <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed font-poppins animate-fade-in-up delay-300">
                 Each fragrance is a carefully crafted symphony of notes, designed to evoke emotions and create lasting memories.
               </p>
               <div className="w-32 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mt-8 animate-fade-in-up delay-500"></div>
@@ -247,10 +247,10 @@ export default function Home() {
                 <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
                   <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Our Craft</span>
                 </div>
-                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
+                <h2 className="text-4xl font-bold font-smooch tracking-tight text-white sm:text-5xl mb-6">
                   The Art of Perfumery
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                <p className="text-lg text-gray-300 leading-relaxed font-poppins mb-8">
                   At Aroma Notes, we believe that fragrance is more than just a scent—it&apos;s an expression of personality, 
                   a memory in a bottle, and a journey of the senses. Our master perfumers combine traditional techniques 
                   with innovative approaches to create unique olfactory experiences.

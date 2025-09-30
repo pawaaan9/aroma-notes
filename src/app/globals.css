@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smooch+Sans:wght@100..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -13,7 +14,9 @@
   --color-primary: var(--primary);
   --color-background-light: #f8f7f5;
   --color-background-dark: #23190f;
-  --font-display: var(--font-manrope);
+  --font-display: 'Poppins', sans-serif;
+  --font-heading: 'Smooch Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +29,47 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global font classes */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-smooch {
+  font-family: 'Smooch Sans', sans-serif;
+}
+
+/* Apply fonts to all text elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Smooch Sans', sans-serif;
+  font-weight: 600;
+}
+
+p, span, div, a, button, input, textarea, label {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Specific styling for different text elements */
+.heading-primary {
+  font-family: 'Smooch Sans', sans-serif;
+  font-weight: 700;
+}
+
+.heading-secondary {
+  font-family: 'Smooch Sans', sans-serif;
+  font-weight: 600;
+}
+
+.body-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.body-text-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .bg-hero-image {

@@ -223,20 +223,20 @@ export default function ProductsPage() {
         <div className="relative z-20">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl animate-fade-in-up">
+            <h2 className="text-4xl font-extrabold font-smooch tracking-tight text-white sm:text-5xl animate-fade-in-up">
               Shop Our Collection
             </h2>
             <div className="mt-6 flex flex-wrap gap-2 animate-fade-in-up delay-300">
-              <button className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
+              <button className="rounded-full bg-primary px-4 py-2 text-sm font-medium font-poppins text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
                 All
               </button>
-              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
+              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium font-poppins text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
                 Perfume
               </button>
-              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
+              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium font-poppins text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
                 Candles
               </button>
-              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
+              <button className="rounded-full bg-gray-800/50 px-4 py-2 text-sm font-medium font-poppins text-gray-300 hover:bg-gray-700/50 hover:text-white transition-all duration-300 hover:scale-105">
                 Diffusers
               </button>
             </div>

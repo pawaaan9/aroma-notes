@@ -36,17 +36,17 @@ export default function AboutPage() {
           
           <div className="container mx-auto px-4 text-center text-white relative z-10">
             <div className="animate-fade-in-up">
-              <h1 className="text-4xl font-extrabold leading-tight tracking-tight md:text-6xl bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent animate-gradient-x hover:animate-pulse">
+              <h1 className="text-4xl font-extrabold font-smooch leading-tight tracking-tight md:text-6xl bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent animate-gradient-x hover:animate-pulse">
                 Crafting Scents, Defining Moments
               </h1>
             </div>
             <div className="animate-fade-in-up delay-300">
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 leading-relaxed animate-typewriter">
+              <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 leading-relaxed font-poppins animate-typewriter">
                 At Aroma Essence, fragrance is more than a scent; it&apos;s an expression of individuality, a memory in the making, and a journey of the senses.
               </p>
             </div>
             <div className="animate-fade-in-up delay-500">
-              <button className="mt-8 group inline-block rounded-lg bg-gradient-to-r from-primary to-orange-600 px-8 py-4 text-base font-bold text-white shadow-2xl transition-all duration-300 hover:shadow-primary/25 hover:shadow-2xl hover:scale-110 hover:-translate-y-2 relative overflow-hidden animate-bounce-subtle">
+              <button className="mt-8 group inline-block rounded-lg bg-gradient-to-r from-primary to-orange-600 px-8 py-4 text-base font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-primary/25 hover:shadow-2xl hover:scale-110 hover:-translate-y-2 relative overflow-hidden animate-bounce-subtle">
                 <span className="relative z-10 flex items-center gap-2">
                   Explore Our Collection
                   <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,10 +66,10 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6 animate-fade-in-up">
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <h2 className="text-3xl font-bold font-smooch tracking-tight text-white sm:text-4xl">
                   Our Story
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed font-poppins">
                   Founded in 2010 by renowned perfumer, Isabella Rossi, Aroma Essence was born from a passion for creating exceptional fragrances that capture the essence of life&apos;s most precious moments. Inspired by nature&apos;s beauty and the art of perfumery, Isabella embarked on a mission to redefine luxury scents, blending traditional techniques with modern innovation.
                 </p>
                 <div className="flex items-center gap-4 pt-4">

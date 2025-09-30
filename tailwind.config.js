@@ -15,6 +15,10 @@ module.exports = {
       },
       fontFamily: {
         display: ["Manrope", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        smooch: ["Smooch Sans", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
+        heading: ["Smooch Sans", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.25rem",

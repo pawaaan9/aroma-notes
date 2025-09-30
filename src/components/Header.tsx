@@ -136,7 +136,7 @@ export default function Header() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
           </div>
           <div className="relative">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
+            <h1 className="text-xl font-bold font-smooch bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
               Aroma
             </h1>
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -145,17 +145,17 @@ export default function Header() {
 
         {/* Enhanced Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/">
+          <Link className="text-sm font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105 group-hover:text-white">Home</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-          <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/products">
+          <Link className="text-sm font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/products">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105 group-hover:text-white">Products</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-          <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/about">
+          <Link className="text-sm font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/about">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105 group-hover:text-white">About</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -203,21 +203,21 @@ export default function Header() {
         <div className="bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50">
           <nav className="container mx-auto px-4 py-4 space-y-3">
             <Link 
-              className="block text-base font-medium text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
+              className="block text-base font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
               href="/"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
-              className="block text-base font-medium text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
+              className="block text-base font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
               href="/products"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Products
             </Link>
             <Link 
-              className="block text-base font-medium text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
+              className="block text-base font-medium font-poppins text-gray-300 hover:text-primary transition-all duration-300 py-3 px-4 rounded-lg hover:bg-primary/10" 
               href="/about"
               onClick={() => setIsMobileMenuOpen(false)}
             >
