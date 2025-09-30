@@ -23,7 +23,7 @@ export default function ProductCard({
     // Products page layout with Quick Add button
     return (
       <div className={`group relative animate-fade-in-up ${delay}`}>
-        <div className="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-800 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
+        <div className="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
           <Image
             alt={imageAlt}
             className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
@@ -55,7 +55,7 @@ export default function ProductCard({
   // Home page layout with overlay details
   return (
     <div className={`group relative animate-fade-in-up ${delay}`}>
-      <div className="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-800 shadow-2xl transition-all duration-500 group-hover:shadow-primary/20 group-hover:shadow-2xl">
+      <div className="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200 shadow-2xl transition-all duration-500 group-hover:shadow-primary/20 group-hover:shadow-2xl">
         <div className="relative overflow-hidden h-full">
           <Image
             alt={imageAlt}

@@ -9,8 +9,16 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Aroma Perfumery",
-  description: "Discover your signature scent with our curated collection of exquisite fragrances, crafted with passion and precision.",
+  title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
+  description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes and signature fragrances, each bottle a masterpiece of olfactory artistry. Hand-crafted with passion, precision, and the finest ingredients from around the world.",
+  keywords: "luxury perfume, signature fragrances, artisanal perfumery, exclusive scents, premium fragrances, Aroma Notes",
+  authors: [{ name: "Aroma Notes" }],
+  openGraph: {
+    title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
+    description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
