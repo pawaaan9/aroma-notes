@@ -1,8 +1,13 @@
 import ProductCard from "../components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage, SanityProduct } from "@/lib/sanity";
+import { formatLkr } from "@/utils/currency";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const products: SanityProduct[] = await fetchProducts();
+  const featured = products.slice(0, 8);
   return (
     <div className="flex min-h-screen w-full flex-col bg-gray-900">
       <Header />
@@ -139,77 +144,25 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
-              <ProductCard
-                name="Midnight Jasmine"
-                description="An intoxicating blend of jasmine sambac, sandalwood, and vanilla. A seductive fragrance that captures the essence of moonlit gardens."
-                price="$185"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Midnight Jasmine luxury perfume bottle"
-                delay="delay-100"
-              />
-              
-              <ProductCard
-                name="Citrus Éclat"
-                description="A vibrant composition of Sicilian bergamot, blood orange, and white musk. Fresh, energizing, and perfect for any occasion."
-                price="$145"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Citrus Éclat fresh perfume bottle"
-                delay="delay-200"
-              />
-              
-              <ProductCard
-                name="Amber Mystique"
-                description="A warm, sensual blend of amber, oud, and rose. This luxurious fragrance embodies sophistication and timeless elegance."
-                price="$220"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Amber Mystique luxury perfume bottle"
-                delay="delay-300"
-              />
-              
-              <ProductCard
-                name="Ocean Breeze"
-                description="A refreshing aquatic fragrance with marine notes, sea salt, and white florals. Perfect for those who love the ocean's embrace."
-                price="$165"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Ocean Breeze fresh perfume bottle"
-                delay="delay-400"
-              />
-              
-              <ProductCard
-                name="Spiced Amber"
-                description="A warm and exotic blend of amber, cinnamon, and vanilla. This luxurious fragrance evokes the essence of ancient spice routes."
-                price="$195"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Spiced Amber luxury perfume bottle"
-                delay="delay-500"
-              />
-              
-              <ProductCard
-                name="Floral Whisper"
-                description="A delicate bouquet of rose, jasmine, and lily of the valley. A feminine fragrance that whispers elegance and grace."
-                price="$175"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Floral Whisper elegant perfume bottle"
-                delay="delay-600"
-              />
-              
-              <ProductCard
-                name="Woodland Trail"
-                description="An earthy composition of cedarwood, pine, and moss. This masculine fragrance captures the essence of forest adventures."
-                price="$185"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Woodland Trail masculine perfume bottle"
-                delay="delay-700"
-              />
-              
-              <ProductCard
-                name="Desert Mirage"
-                description="A mysterious blend of oud, saffron, and sandalwood. This exotic fragrance transports you to distant desert landscapes."
-                price="$210"
-                imageSrc="/yusuf-bhai.webp"
-                imageAlt="Desert Mirage exotic perfume bottle"
-                delay="delay-800"
-              />
+              {featured.map((p, idx) => {
+                const imageSrc = selectPrimaryImage(p) ?? "/yusuf-bhai.webp";
+                const priceNumber = selectDisplayPrice(p);
+                const displayPrice = priceNumber != null ? formatLkr(priceNumber) : "";
+                const path = `/product-view/${p.slug?.current ?? p._id}`;
+                return (
+                  <div key={p._id}>
+                    <ProductCard
+                      name={p.name}
+                      description={p.brand ?? undefined}
+                      price={displayPrice}
+                      imageSrc={imageSrc}
+                      imageAlt={p.name}
+                      delay={`delay-${(idx + 1) * 100}`}
+                      href={path}
+                    />
+                  </div>
+                );
+              })}
             </div>
             
             {/* Call to Action */}
