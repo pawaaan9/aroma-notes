@@ -12,6 +12,12 @@ type Props = {
 };
 
 export default function MainAccordsChart({ accords }: Props) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(t);
+  }, []);
+
   const items = useMemo(() => {
     return (accords || [])
       .filter(a => typeof a?.percentage === 'number' && (a?.name ?? '').toString().trim().length > 0)
@@ -19,12 +25,6 @@ export default function MainAccordsChart({ accords }: Props) {
   }, [accords]);
 
   if (!items.length) return null;
-
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(t);
-  }, []);
 
   return (
     <div className="space-y-2">

@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { fetchProducts, selectDisplayPrice, selectPrimaryImage, SanityProduct } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
-import Link from "next/link";
 
 export default async function Home() {
   const products: SanityProduct[] = await fetchProducts();
