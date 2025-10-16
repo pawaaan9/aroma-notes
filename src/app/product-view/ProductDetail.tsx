@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import type { SanityProduct } from "@/lib/sanity";
 import VariantSelector from "./VariantSelector";
+import MainAccordsChart from "./MainAccordsChart";
 
 type Props = {
   product: SanityProduct;
@@ -17,13 +18,13 @@ export default function ProductDetail({ product }: Props) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div className="rounded-xl overflow-hidden bg-gray-800/40 border border-gray-700">
+      <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-gray-800/40 border border-gray-700">
         <Image
           alt={product.name}
           src={imageSrc}
-          width={800}
-          height={1000}
-          className="w-full h-auto object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
         />
       </div>
       <div>
@@ -51,20 +52,7 @@ export default function ProductDetail({ product }: Props) {
         {product.mainAccords?.length ? (
           <div className="mt-10">
             <h3 className="text-white font-semibold mb-3">Main Accords</h3>
-            <div className="flex flex-wrap gap-3">
-              {product.mainAccords?.map((a, i) => (
-                <div key={i} className="px-3 py-1 rounded-full text-sm border border-gray-700 text-gray-200 flex items-center gap-2">
-                  <span
-                    className="inline-block w-2 h-2 rounded-full"
-                    style={{ backgroundColor: a?.color?.hex || '#999' }}
-                  />
-                  <span>{a?.name}</span>
-                  {typeof a?.percentage === 'number' ? (
-                    <span className="text-gray-400">{` ${a?.percentage}%`}</span>
-                  ) : null}
-                </div>
-              ))}
-            </div>
+            <MainAccordsChart accords={product.mainAccords} />
           </div>
         ) : null}
 
