@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Accord = {
   name?: string | null;
@@ -12,11 +12,26 @@ type Props = {
 };
 
 export default function MainAccordsChart({ accords }: Props) {
-  const [mounted, setMounted] = useState(false);
+  // Animate when the section becomes visible in the viewport (mobile + desktop)
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(t);
-  }, []);
+    if (!containerRef.current || inView) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      { root: null, threshold: 0.2 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [inView]);
 
   const items = useMemo(() => {
     return (accords || [])
@@ -27,7 +42,7 @@ export default function MainAccordsChart({ accords }: Props) {
   if (!items.length) return null;
 
   return (
-    <div className="space-y-2">
+    <div ref={containerRef} className="space-y-2">
       {items.map((a, i) => {
         const pct = Math.max(0, Math.min(100, Number(a.percentage || 0)));
         const color = a?.color?.hex || '#e5e7eb';
@@ -36,7 +51,7 @@ export default function MainAccordsChart({ accords }: Props) {
             <div
               className="h-9 rounded-full transition-[width] duration-700 ease-out"
               style={{
-                width: mounted ? `${pct}%` : '0%',
+                width: inView ? `${pct}%` : '0%',
                 backgroundColor: color,
                 transitionDelay: `${i * 80}ms`
               }}
