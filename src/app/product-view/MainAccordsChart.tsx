@@ -34,7 +34,7 @@ export default function MainAccordsChart({ accords }: Props) {
         return (
           <div key={`${a.name}-${i}`} className="relative">
             <div
-              className="h-8 rounded-md transition-[width] duration-700 ease-out"
+              className="h-9 rounded-full transition-[width] duration-700 ease-out"
               style={{
                 width: mounted ? `${pct}%` : '0%',
                 backgroundColor: color,
@@ -43,7 +43,6 @@ export default function MainAccordsChart({ accords }: Props) {
             />
             <div className="absolute inset-0 flex items-center justify-between px-3">
               <span className="text-sm font-semibold text-gray-900">{a?.name}</span>
-              <span className="text-xs font-semibold text-gray-900">{pct}%</span>
             </div>
           </div>
         );

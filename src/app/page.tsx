@@ -8,7 +8,7 @@ export default async function Home() {
   const products: SanityProduct[] = await fetchProducts();
   const featured = products.slice(0, 8);
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gray-900">
+    <div className="flex min-h-screen w-full flex-col bg-white">
       <Header />
       
       <main className="flex-grow">
@@ -21,8 +21,8 @@ export default async function Home() {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0 block sm:hidden"
-            style={{ objectFit: 'cover' }}
+            className="absolute inset-0 w-full h-full object-cover object-left z-0 block sm:hidden transform scale-[1.2]"
+            style={{ objectFit: 'cover', objectPosition: 'left center' }}
           >
             <source src="/hero-mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -40,44 +40,11 @@ export default async function Home() {
             Your browser does not support the video tag.
           </video>
           
-          {/* Overlay Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent z-20"></div>
+          {/* Overlay Gradients (subtle dark for readability, no fog) */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-20"></div>
           
-          {/* Floating Perfume Essence Particles */}
-          <div className="absolute inset-0 overflow-hidden z-30">
-            {/* Jasmine Essence */}
-            <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-float-particle shadow-lg shadow-white/10"></div>
-            <div className="absolute top-20 left-12 w-2 h-2 bg-white/15 rounded-full animate-float-particle delay-200"></div>
-            
-            {/* Rose Essence */}
-            <div className="absolute top-40 right-20 w-3 h-3 bg-rose-200/30 rounded-full animate-float-particle delay-500 shadow-lg shadow-rose-200/20"></div>
-            <div className="absolute top-42 right-22 w-1 h-1 bg-rose-100/40 rounded-full animate-float-particle delay-700"></div>
-            
-            {/* Sandalwood Essence */}
-            <div className="absolute bottom-40 left-20 w-5 h-5 bg-amber-200/25 rounded-full animate-float-particle delay-1000 shadow-lg shadow-amber-200/15"></div>
-            <div className="absolute bottom-38 left-22 w-2 h-2 bg-amber-100/30 rounded-full animate-float-particle delay-1200"></div>
-            
-            {/* Bergamot Essence */}
-            <div className="absolute top-60 left-1/3 w-2 h-2 bg-yellow-200/35 rounded-full animate-float-particle delay-700 shadow-lg shadow-yellow-200/20"></div>
-            <div className="absolute top-62 left-1/3 w-1 h-1 bg-yellow-100/40 rounded-full animate-float-particle delay-900"></div>
-            
-            {/* Vanilla Essence */}
-            <div className="absolute bottom-60 right-1/3 w-4 h-4 bg-cream-200/30 rounded-full animate-float-particle delay-300 shadow-lg shadow-cream-200/15"></div>
-            <div className="absolute bottom-58 right-1/3 w-2 h-2 bg-cream-100/35 rounded-full animate-float-particle delay-500"></div>
-            
-            {/* Lavender Essence */}
-            <div className="absolute top-1/3 right-10 w-3 h-3 bg-violet-200/40 rounded-full animate-float-particle delay-1200 shadow-lg shadow-violet-200/20"></div>
-            <div className="absolute top-1/3 right-12 w-1 h-1 bg-violet-100/50 rounded-full animate-float-particle delay-1400"></div>
-            
-            {/* Oud Essence */}
-            <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-amber-800/20 rounded-full animate-float-particle delay-600 shadow-lg shadow-amber-800/10"></div>
-            <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-amber-700/25 rounded-full animate-float-particle delay-800"></div>
-            
-            {/* Musk Essence */}
-            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-gray-200/30 rounded-full animate-float-particle delay-1000 shadow-lg shadow-gray-200/15"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-gray-100/35 rounded-full animate-float-particle delay-1200"></div>
-          </div>
+          {/* Removed decorative particles on hero for a cleaner, clearer look */}
           
           {/* Main Content */}
           <div className="relative z-30 mx-auto max-w-5xl text-center text-white px-4">
@@ -90,7 +57,7 @@ export default async function Home() {
               </h1>
             </div>
             <div className="animate-fade-in-up delay-300">
-              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-200 leading-relaxed font-light font-poppins">
+              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-100 leading-relaxed font-light font-poppins">
                 Where every scent tells a story. Discover our exclusive collection of artisanal perfumes, 
                 each bottle a masterpiece of olfactory artistry.
               </p>
@@ -111,7 +78,7 @@ export default async function Home() {
             {/* Perfume Bottle Icon */}
             <div className="mt-16 animate-bounce-subtle">
               <div className="inline-block p-4 bg-gradient-to-b from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                <svg className="w-8 h-8 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
                 </svg>
               </div>
@@ -120,36 +87,18 @@ export default async function Home() {
         </section>
         
         {/* Featured Collection Section */}
-        <section id="products" className="py-20 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-          {/* Perfume Essence Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            {/* Jasmine Essence Cloud */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
-            <div className="absolute top-25 left-15 w-20 h-20 bg-white/3 rounded-full blur-2xl animate-float-slow delay-500"></div>
-            
-            {/* Rose Essence Cloud */}
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-rose-200/5 rounded-full blur-3xl animate-float-reverse"></div>
-            <div className="absolute bottom-25 right-15 w-24 h-24 bg-rose-100/3 rounded-full blur-2xl animate-float-reverse delay-300"></div>
-            
-            {/* Sandalwood Essence Cloud */}
-            <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-amber-200/4 rounded-full blur-3xl animate-float-slow delay-1000"></div>
-            
-            {/* Vanilla Essence Cloud */}
-            <div className="absolute bottom-1/3 left-1/4 w-36 h-36 bg-yellow-100/4 rounded-full blur-3xl animate-float-reverse delay-700"></div>
-            
-            {/* Lavender Essence Cloud */}
-            <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-violet-200/4 rounded-full blur-3xl animate-float-slow delay-1200"></div>
-          </div>
+        <section id="products" className="py-20 sm:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+          {/* Removed background clouds for a crisp light section */}
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="text-center mb-20">
-              <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/20 backdrop-blur-sm">
-                <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
+              <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">
+                <span className="text-amber-700 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
               </div>
-              <h2 className="text-4xl font-bold font-smooch tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
+              <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
                 Masterpiece Fragrances
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed font-poppins animate-fade-in-up delay-300">
+              <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed font-poppins animate-fade-in-up delay-300">
                 Each fragrance is a carefully crafted symphony of notes, designed to evoke emotions and create lasting memories.
               </p>
               <div className="w-32 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mt-8 animate-fade-in-up delay-500"></div>
@@ -179,7 +128,7 @@ export default async function Home() {
             
             {/* Call to Action */}
             <div className="text-center mt-16 animate-fade-in-up delay-700">
-              <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500/20 to-rose-500/20 border border-amber-400/30 px-8 py-4 text-lg font-semibold text-amber-300 hover:bg-gradient-to-r hover:from-amber-500/30 hover:to-rose-500/30 transition-all duration-300 backdrop-blur-sm" href="/products">
+              <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500/10 to-rose-500/10 border border-amber-400/30 px-8 py-4 text-lg font-semibold text-amber-700 hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300 backdrop-blur-sm" href="/products">
                 <span className="relative z-10">View All Fragrances</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
@@ -188,7 +137,7 @@ export default async function Home() {
         </section>
         
         {/* About Section */}
-        <section id="about" className="py-20 sm:py-32 bg-black relative overflow-hidden">
+        <section id="about" className="py-20 sm:py-32 bg-white relative overflow-hidden">
           {/* Perfume Essence Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {/* Oud Essence Cloud */}
@@ -209,13 +158,13 @@ export default async function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
-                <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                  <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Our Craft</span>
+                <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">
+                  <span className="text-amber-700 text-sm font-medium tracking-wider uppercase">Our Craft</span>
                 </div>
-                <h2 className="text-4xl font-bold font-smooch tracking-tight text-white sm:text-5xl mb-6">
+                <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl mb-6">
                   The Art of Perfumery
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed font-poppins mb-8">
+                <p className="text-lg text-gray-600 leading-relaxed font-poppins mb-8">
                   At Aroma Notes, we believe that fragrance is more than just a scent—it&apos;s an expression of personality, 
                   a memory in a bottle, and a journey of the senses. Our master perfumers combine traditional techniques 
                   with innovative approaches to create unique olfactory experiences.
@@ -223,30 +172,30 @@ export default async function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300">Hand-selected ingredients from around the world</span>
+                    <span className="text-gray-700">Hand-selected ingredients from around the world</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300">Small-batch production for exceptional quality</span>
+                    <span className="text-gray-700">Small-batch production for exceptional quality</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300">Sustainable and ethical sourcing practices</span>
+                    <span className="text-gray-700">Sustainable and ethical sourcing practices</span>
                   </div>
                 </div>
               </div>
               <div className="animate-fade-in-up delay-300">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-rose-500/20 rounded-2xl blur-3xl"></div>
-                  <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-amber-400/20 backdrop-blur-sm">
+                    <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-amber-400/20 backdrop-blur-sm">
                     <div className="text-center">
-                      <div className="inline-block p-6 bg-gradient-to-b from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 mb-6">
-                        <svg className="w-12 h-12 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+                      <div className="inline-block p-6 bg-gradient-to-b from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 mb-6">
+                        <svg className="w-12 h-12 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
                         </svg>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Craftsmanship</h3>
-                      <p className="text-gray-300">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">Craftsmanship</h3>
+                      <p className="text-gray-700">
                         Every bottle is a testament to our commitment to excellence and attention to detail.
                       </p>
                     </div>

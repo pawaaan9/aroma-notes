@@ -22,12 +22,18 @@ export default function VariantSelector({ variants, value, onChange }: VariantSe
       <div className="flex flex-wrap gap-2">
         {inOrder.map((v, i) => {
           const isActive = i === selectedIdx;
+          const isOut = v.inStock === false;
           return (
             <button
               key={i}
               type="button"
+              disabled={isOut}
               className={`px-3 py-1 rounded-full text-sm border transition-colors ${
-                isActive ? "border-primary text-primary" : "border-gray-700 text-gray-200 hover:border-gray-500"
+                isActive
+                  ? "border-primary text-primary bg-primary/10"
+                  : isOut
+                  ? "border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed"
+                  : "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
               }`}
               onClick={() => {
                 setInternalIdx(i);
@@ -39,12 +45,19 @@ export default function VariantSelector({ variants, value, onChange }: VariantSe
           );
         })}
       </div>
+      <div className="mt-3 flex items-center gap-3">
+        {selected ? (
+          <span className={`text-sm font-medium ${selected.inStock === false ? "text-rose-600" : "text-emerald-600"}`}>
+            {selected.inStock === false ? "Out of stock" : "In stock"}
+          </span>
+        ) : null}
+      </div>
       {price != null ? (
-        <div className="mt-4">
+        <div className="mt-2">
           <p className="text-xl font-bold text-primary">
             {formatLkr(price)}
             {hasDiscount && selected?.price != null ? (
-              <span className="ml-2 text-base font-normal text-gray-400 line-through">{formatLkr(selected.price)}</span>
+              <span className="ml-2 text-base font-normal text-gray-500 line-through">{formatLkr(selected.price)}</span>
             ) : null}
           </p>
         </div>

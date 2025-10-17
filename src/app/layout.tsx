@@ -27,9 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${manrope.variable} bg-gray-900 font-display text-gray-200 antialiased`}
+        className={`${manrope.variable} bg-white font-display text-gray-900 antialiased`}
       >
         {children}
       </body>

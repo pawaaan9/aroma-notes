@@ -30,22 +30,16 @@ export default function ProductCard({
         <div className="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
           <Image
             alt={imageAlt}
-            className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover object-center transition-transform duration-300"
             src={imageSrc}
             width={400}
             height={533}
           />
-          {/* Quick Add Button */}
-          <button
-            className="absolute bottom-20 right-4 hidden rounded-lg bg-primary/80 px-3 py-2 text-xs font-bold text-white opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:bottom-24 group-hover:opacity-100 group-hover:block hover:bg-primary hover:scale-105"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Quick Add
-          </button>
+          {/* Removed floating view pill on hover over image */}
         </div>
         <div className="mt-4 flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-base font-semibold text-white group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">
               {name}
             </h3>
             <p className="mt-1 text-sm text-primary font-medium">
@@ -63,41 +57,49 @@ export default function ProductCard({
 
   // Home page layout with overlay details
   const CardInner = (
-    <div className={`group relative animate-fade-in-up ${delay}`}>
-      <div className="aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-200 shadow-2xl transition-all duration-500 group-hover:shadow-primary/20 group-hover:shadow-2xl">
+    <div className={`group relative animate-fade-in-up ${delay}`}> 
+      {/* Hover gradient frame using brand colors */}
+      <div className="pointer-events-none absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-amber-500/40 to-rose-500/40 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></div>
+      <div className="relative rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 transform group-hover:shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-400/60 group-hover:-translate-y-1">
+      <div className="aspect-[4/5] w-full overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
           <Image
             alt={imageAlt}
-            className="h-full w-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+            className="h-full w-full object-cover object-center transition-all duration-500"
             src={imageSrc}
             width={300}
             height={375}
           />
-          {/* Product Details Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-            <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500">
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
-                {name}
-              </h3>
-              <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+          {/* Overlay disabled on all viewports since details are below image */}
+          <div className="hidden"></div>
+          <div className="hidden"></div>
+        </div>
+      </div>
+      {/* Details below image (all viewports) */}
+      <div className="p-4 space-y-2">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900">
+              {name}
+            </h3>
+            {description ? (
+              <p className="mt-1 text-sm text-gray-600 line-clamp-2">
                 {description}
               </p>
-              <div className="flex items-center justify-between">
-                <p className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
-                  {price}
-                </p>
-                <button
-                  className="bg-primary/90 hover:bg-primary text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+            ) : null}
           </div>
-          {/* Subtle overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <p className="text-base font-bold text-primary mt-2 sm:mt-1 sm:text-right sm:whitespace-nowrap">{price}</p>
         </div>
+        <div className="pt-1">
+          <div className="group w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-400/60 bg-white text-amber-700 font-semibold py-2.5 px-4 transition-all duration-300 hover:border-rose-400 hover:text-rose-600">
+            <span>View</span>
+            <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   );

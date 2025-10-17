@@ -13,7 +13,7 @@ export default async function ProductViewPage({ params }: PageProps) {
 
   if (!product) {
     return (
-      <div className="flex min-h-screen w-full flex-col bg-gray-900">
+      <div className="flex min-h-screen w-full flex-col bg-white">
         <Header />
         <main className="flex-grow flex items-center justify-center">
           <p className="text-gray-300">Product not found.</p>
@@ -24,7 +24,7 @@ export default async function ProductViewPage({ params }: PageProps) {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gray-900">
+    <div className="flex min-h-screen w-full flex-col bg-white">
       <Header />
       <main className="flex-grow">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
