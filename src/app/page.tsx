@@ -15,12 +15,25 @@ export default async function Home() {
         {/* Hero Section with Video Background */}
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
           {/* Video Background */}
+          {/* Mobile video */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
+            className="absolute inset-0 w-full h-full object-cover z-0 block sm:hidden"
+            style={{ objectFit: 'cover' }}
+          >
+            <source src="/hero-mobile.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Desktop/tablet video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
             style={{ objectFit: 'cover' }}
           >
             <source src="/hero-video.mp4" type="video/mp4" />
