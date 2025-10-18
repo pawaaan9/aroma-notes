@@ -8,28 +8,16 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "What makes Aroma Notes fragrances unique?",
-    answer: "Aroma Notes is a luxury fragrance house imported to Sri Lanka by Yusuf Bhai. Each fragrance features world-class compositions inspired by high-end niche perfumes, crafted with premium oils and exceptional precision. Our commitment to quality ensures every bottle delivers an authentic luxury experience with outstanding longevity."
+    question: "What Makes Aroma Notes Fragrances Unique?",
+    answer: "Aroma Notes brings Sri Lankans the rare opportunity to experience world-class luxury perfumes handcrafted by Yusuf Bhai. Known for his exceptional skill and precision, Yusuf Bhai creates fragrances inspired by high-end niche compositions, using only premium-quality oils. Through Aroma Notes, you can now enjoy these exclusive handmade creations — perfumes that blend authenticity, elegance, and long-lasting luxury, all in one bottle."
   },
   {
-    question: "How long do the fragrances last?",
-    answer: "Our fragrances are formulated for exceptional longevity, typically lasting 6 to 8 hours on the skin. The exact duration depends on your body chemistry and application method. For extended wear, we recommend reapplying throughout the day or using our complementary products."
+    question: "How Long Do the Fragrances Last?",
+    answer: "Yusuf Bhai handmade perfumes typically last 6 to 8 hours on the skin, depending on your body chemistry and application method. For the best results, apply on pulse points such as the wrists, neck, and behind the ears to enhance projection and longevity."
   },
   {
-    question: "Are all Aroma Notes fragrances imported?",
-    answer: "Yes, Aroma Notes is an imported luxury fragrance house exclusively brought to Sri Lanka by Yusuf Bhai. All our fragrances feature world-class compositions and premium ingredients sourced internationally, ensuring authentic quality and exceptional performance."
-  },
-  {
-    question: "Do you offer samples or testers?",
-    answer: "Yes, we offer fragrance samples for many of our collections, allowing you to experience the luxury before committing to a full bottle. Contact us through WhatsApp to request samples or discuss fragrance consultations with our team."
-  },
-  {
-    question: "Can I return or exchange a fragrance?",
-    answer: "We want you to be completely satisfied with your purchase. Please contact our customer service team within 30 days of purchase for return or exchange options. Check our Exchange Policy for complete details."
-  },
-  {
-    question: "How should I store my fragrance?",
-    answer: "Store your fragrance in a cool, dark place away from direct sunlight and heat. The ideal storage temperature is between 15 to 25 degrees Celsius. Avoid storing in bathrooms due to humidity, as this can affect the fragrance's integrity and longevity."
+    question: "Are All Aroma Notes Fragrances Imported?",
+    answer: "Yes. All Aroma Notes fragrances are imported from Yusuf Bhai, who handcrafts each perfume with premium ingredients and world-class expertise. Every fragrance you find at Aroma Notes is an authentic handmade creation, brought directly from his luxury perfume collection to Sri Lanka."
   }
 ];
 
@@ -71,7 +59,7 @@ export default function FAQ() {
                 onClick={() => toggleItem(index)}
                 className="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-200 text-left"
               >
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors duration-200">
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors duration-200 font-saira">
                   {item.question}
                 </h3>
                 <div className="flex-shrink-0 ml-4">
@@ -114,7 +102,7 @@ export default function FAQ() {
               {/* FAQ Answer - Expandable Content */}
               {openIndex === index && (
                 <div className="px-6 py-5 bg-gradient-to-br from-gray-50 to-white border-t border-gray-200 animate-fade-in-up">
-                  <p className="text-gray-700 leading-relaxed font-poppins">
+                  <p className="text-gray-700 leading-relaxed font-saira">
                     {item.answer}
                   </p>
                 </div>
