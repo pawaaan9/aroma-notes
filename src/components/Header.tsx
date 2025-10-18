@@ -37,18 +37,14 @@ export default function Header() {
           {/* Enhanced Logo */}
           <Link className="flex items-center gap-3 group" href="/">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-600 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 animate-pulse"></div>
-              <div className="relative bg-gradient-to-br from-primary/20 to-orange-600/20 p-2 rounded-full group-hover:from-primary/30 group-hover:to-orange-600/30 transition-all duration-300">
-                <Image
-                  src="/logo.png"
-                  alt="Aroma Notes Logo"
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 transition-all duration-500 group-hover:rotate-180 group-hover:scale-125"
-                  priority
-                />
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
+              <Image
+                src="/logo.png"
+                alt="Aroma Notes Logo"
+                width={36}
+                height={36}
+                className="h-9 w-9"
+                priority
+              />
             </div>
             <div className="relative">
               <h1 className="text-xl font-bold font-audiowide tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
@@ -119,18 +115,14 @@ export default function Header() {
         {/* Enhanced Logo */}
         <Link className="flex items-center gap-3 group" href="/">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-600 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 animate-pulse"></div>
-            <div className="relative bg-gradient-to-br from-primary/20 to-orange-600/20 p-2 rounded-full group-hover:from-primary/30 group-hover:to-orange-600/30 transition-all duration-300">
-              <Image
-                src="/logo.png"
-                alt="Aroma Notes Logo"
-                width={24}
-                height={24}
-                className="h-6 w-6 transition-all duration-500 group-hover:rotate-180 group-hover:scale-125"
-                priority
-              />
-            </div>
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
+            <Image
+              src="/logo.png"
+              alt="Aroma Notes Logo"
+              width={36}
+              height={36}
+              className="h-9 w-9"
+              priority
+            />
           </div>
           <div className="relative">
             <h1 className="text-xl font-bold font-smooch bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
