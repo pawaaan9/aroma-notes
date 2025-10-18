@@ -40,7 +40,7 @@ export default function MobileFilters() {
           />
 
           {/* Drawer */}
-          <div className="absolute inset-y-0 right-0 w-[85vw] max-w-[360px] bg-white shadow-2xl flex flex-col animate-slide-in-right">
+          <div className="absolute inset-y-0 right-0 w-[85vw] max-w-[360px] h-full bg-white shadow-2xl flex flex-col overflow-y-auto animate-slide-in-right">
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-4 border-b">
               <h3 className="text-sm font-semibold tracking-[0.2em] text-gray-800">FILTERS</h3>
@@ -56,7 +56,7 @@ export default function MobileFilters() {
             </div>
 
             {/* Sections */}
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-8">
+            <div className="px-4 py-3 space-y-6">
               {/* Availability */}
               <section>
                 <div className="mb-3 flex items-center justify-between">
@@ -115,7 +115,7 @@ export default function MobileFilters() {
             <div className="border-t p-4">
               <button
                 onClick={() => setOpen(false)}
-                className="w-full rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-gray-900"
+                className="w-full rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-gray-900 font-saira uppercase"
               >
                 VIEW RESULTS
               </button>

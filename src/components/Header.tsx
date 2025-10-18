@@ -60,20 +60,17 @@ export default function Header() {
 
           {/* Enhanced Desktop Navigation */}
           <nav className="hidden items-center gap-8 md:flex">
-            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/">
+            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Home</span>
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
-            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/products">
+            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/products">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Products</span>
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
-            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/about">
+            <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/about">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">About</span>
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </nav>
 
@@ -145,20 +142,17 @@ export default function Header() {
 
         {/* Enhanced Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/">
+          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Home</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/products">
+          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/products">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Products</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/10" href="/about">
+          <Link className="text-sm font-medium font-saira uppercase text-gray-800 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/about">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">About</span>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-orange-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </nav>
 
