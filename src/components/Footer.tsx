@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-[10vw]">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
             <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">

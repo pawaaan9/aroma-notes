@@ -34,7 +34,7 @@ export default function AboutPage() {
             <div className="absolute bottom-1/4 right-1/2 w-2 h-2 bg-orange-300 rounded-full animate-float-particle delay-1200"></div>
           </div>
           
-          <div className="container mx-auto px-4 text-center text-gray-900 relative z-10">
+          <div className="mx-auto max-w-none px-4 lg:px-[10vw] text-center text-gray-900 relative z-10">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-extrabold font-smooch leading-tight tracking-tight md:text-6xl bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent animate-gradient-x hover:animate-pulse">
                 Crafting Scents, Defining Moments
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
         {/* Our Story Section */}
         <section className="py-16 sm:py-24 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw]">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6 animate-fade-in-up">
                 <h2 className="text-3xl font-bold font-smooch tracking-tight text-gray-900 sm:text-4xl">
@@ -94,7 +94,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="bg-gray-50 py-16 sm:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw]">
             <div className="mx-auto max-w-3xl text-center mb-16">
               <div className="animate-fade-in-up">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
@@ -171,7 +171,7 @@ export default function AboutPage() {
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/5 via-transparent to-orange-600/5 animate-pulse"></div>
           </div>
           
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw] relative z-10">
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="group text-center animate-fade-in-up delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">

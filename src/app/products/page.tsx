@@ -15,7 +15,7 @@ export default async function ProductsPage() {
         {/* Removed all smoke/particle decorative layers for clarity */}
         
         <div className="relative z-20">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-none px-4 py-12 sm:px-6 lg:px-[10vw]">
           <div className="mb-12">
             <h2 className="text-4xl font-extrabold font-smooch tracking-tight text-gray-900 sm:text-5xl animate-fade-in-up">
               Shop Our Collection

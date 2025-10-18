@@ -27,7 +27,7 @@ export default function ProductCard({
     // Products page layout with Quick Add button
     const CardInner = (
       <div className={`group relative animate-fade-in-up ${delay}`}>
-        <div className="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
+        <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
           <Image
             alt={imageAlt}
             className="h-full w-full object-cover object-center transition-transform duration-300"
@@ -61,7 +61,7 @@ export default function ProductCard({
       {/* Hover gradient frame using brand colors */}
       <div className="pointer-events-none absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-amber-500/40 to-rose-500/40 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></div>
       <div className="relative rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 transform group-hover:shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-400/60 group-hover:-translate-y-1">
-      <div className="aspect-[4/5] w-full overflow-hidden rounded-t-xl bg-gray-100">
+      <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
           <Image
             alt={imageAlt}
