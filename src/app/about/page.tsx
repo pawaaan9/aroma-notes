@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HeroVideo from "../../components/HeroVideo";
+import FAQ from "../../components/FAQ";
 
 export default function AboutPage() {
   return (
@@ -11,8 +12,8 @@ export default function AboutPage() {
         {/* Shared hero video across screens */}
         <section>
           <HeroVideo
-            title="Crafting Scents, Defining Moments"
-            subtitle="At Aroma Essence, fragrance is more than a scent; it's an expression of individuality, a memory in the making, and a journey of the senses."
+            title="Discover the Art of Perfume"
+            subtitle="Refined, imported, and crafted for those who value excellence in luxury fragrances."
           />
         </section>
 
@@ -22,14 +23,17 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6 animate-fade-in-up">
                 <h2 className="text-3xl font-bold font-smooch tracking-tight text-gray-900 sm:text-4xl">
-                  Our Story
+                  About Aroma Notes
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed font-poppins">
-                  Founded in 2010 by renowned perfumer, Isabella Rossi, Aroma Essence was born from a passion for creating exceptional fragrances that capture the essence of life&apos;s most precious moments. Inspired by nature&apos;s beauty and the art of perfumery, Isabella embarked on a mission to redefine luxury scents, blending traditional techniques with modern innovation.
+                  Aroma Notes is a luxury fragrance house proudly imported to Sri Lanka by Yusuf Bhai. Every bottle reflects a careful selection of premium oils and world-class compositions, inspired by high-end niche perfumes. Our mission is to bring long-lasting, elegant and character-rich scents to those who appreciate true perfume craftsmanship.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed font-poppins">
+                  Each blend is curated with precision from the first impression to the final dry-down, offering depth, sophistication and outstanding performance on skin. Whether you seek a bold signature scent or a refined everyday fragrance, Aroma Notes delivers an experience of pure luxury with every spray.
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <div className="h-1 w-16 bg-gradient-to-r from-primary to-orange-600 rounded-full"></div>
-                  <span className="text-sm text-gray-400 font-medium">Since 2010</span>
+                  <span className="text-sm text-gray-400 font-medium">Luxury Imported Fragrances</span>
                 </div>
               </div>
               <div className="animate-fade-in-up delay-300">
@@ -47,19 +51,19 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Commitment Section */}
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw]">
             <div className="mx-auto max-w-3xl text-center mb-16">
               <div className="animate-fade-in-up">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-                  Our Values
+                  Our Commitment
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-orange-600 mx-auto rounded-full mb-6"></div>
               </div>
               <div className="animate-fade-in-up delay-300">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  At Aroma Essence, our values are the cornerstone of everything we do. We are dedicated to crafting exceptional fragrances that embody elegance, sophistication, and timeless allure.
+                  At Aroma Notes, we are dedicated to bringing world-class fragrances with exceptional quality, longevity, and sophistication to those who appreciate true perfume artistry. Imported by Yusuf Bhai with passion and expertise.
                 </p>
               </div>
             </div>
@@ -74,10 +78,10 @@ export default function AboutPage() {
                   <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-300 animate-ping"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-all duration-300 relative z-10 group-hover:scale-105">
-                  Sustainability
+                  Premium Selection
                 </h3>
                 <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
-                  We are committed to sustainable practices, sourcing our ingredients responsibly and minimizing our environmental impact.
+                  Every fragrance is carefully curated with premium oils and world-class compositions for exceptional quality and longevity.
                 </p>
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -91,10 +95,10 @@ export default function AboutPage() {
                   <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-300 animate-ping"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-all duration-300 relative z-10 group-hover:scale-105">
-                  Quality
+                  Precision Crafting
                 </h3>
                 <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
-                  We use only the finest, ethically sourced ingredients, ensuring the highest quality and longevity of our fragrances.
+                  Each blend is meticulously curated from first impression to final dry-down, ensuring depth and sophistication in every spray.
                 </p>
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -108,10 +112,10 @@ export default function AboutPage() {
                   <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-300 animate-ping"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-all duration-300 relative z-10 group-hover:scale-105">
-                  Passion
+                  Luxury Experience
                 </h3>
                 <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
-                  Our passion for perfumery drives us to create unique and captivating scents that evoke emotions and leave a lasting impression.
+                  Whether bold signature or refined everyday fragrance, we deliver pure luxury with outstanding performance and character.
                 </p>
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -130,10 +134,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="group text-center animate-fade-in-up delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up">14+</div>
-                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">14+</div>
+                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up">100%</div>
+                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">100%</div>
                 </div>
-                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Years of Excellence</div>
+                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Authentic Quality</div>
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
               
@@ -148,19 +152,19 @@ export default function AboutPage() {
               
               <div className="group text-center animate-fade-in-up delay-300 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up">100K+</div>
-                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">100K+</div>
+                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up">6-8h</div>
+                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">6-8h</div>
                 </div>
-                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Happy Customers</div>
+                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Long-lasting Wear</div>
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
               
               <div className="group text-center animate-fade-in-up delay-500 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up">25+</div>
-                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">25+</div>
+                  <div className="text-4xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300">Timeless</div>
+                  <div className="absolute inset-0 text-4xl font-bold text-primary/20 mb-2 animate-pulse">Timeless</div>
                 </div>
-                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Countries Served</div>
+                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Appeal</div>
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
             </div>
@@ -168,6 +172,7 @@ export default function AboutPage() {
         </section>
       </main>
       
+      <FAQ />
       <Footer />
     </div>
   );
