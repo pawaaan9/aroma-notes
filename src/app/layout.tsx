@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import WhatsAppChat from "@/components/WhatsAppChat";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${manrope.variable} bg-white font-display text-gray-900 antialiased`}
       >
         {children}
+        <WhatsAppChat />
       </body>
     </html>
   );
