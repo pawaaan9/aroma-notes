@@ -30,13 +30,7 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
   // Prevent hydration mismatch by not rendering until mounted
   if (!isMounted) {
     return (
-      <header className="w-full bg-transparent transition-all duration-300 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-float-slow"></div>
-          <div className="absolute top-0 right-1/4 w-24 h-24 bg-orange-500/5 rounded-full blur-xl animate-float-reverse"></div>
-          <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
-        </div>
-        
+      <header className="w-full bg-transparent transition-all duration-300 relative">
          <div className="container mx-auto flex items-center justify-between px-4 py-2 sm:px-6 lg:px-[5vw] relative z-10">
           {/* Enhanced Logo */}
           <Link className="flex h-full items-center gap-3 group" href="/">
@@ -96,14 +90,7 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
   }
 
   return (
-    <header className="w-full bg-transparent transition-all duration-300 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-float-slow"></div>
-        <div className="absolute top-0 right-1/4 w-24 h-24 bg-orange-500/5 rounded-full blur-xl animate-float-reverse"></div>
-        <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
-      </div>
-      
+    <header className="w-full bg-transparent transition-all duration-300 relative">
        <div className="container mx-auto flex items-center justify-between px-4 py-2 sm:px-6 lg:px-[5vw] relative z-10">
         {/* Enhanced Logo */}
         <Link className="flex h-full items-center gap-3 group" href="/">
