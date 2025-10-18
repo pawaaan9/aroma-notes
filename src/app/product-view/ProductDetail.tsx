@@ -14,7 +14,7 @@ export default function ProductDetail({ product }: Props) {
   const variants = useMemo(() => product.variants ?? [], [product]);
   const [selectedIdx, setSelectedIdx] = useState<number>(-1);
   const [isAdding, setIsAdding] = useState(false);
-  const { addItem, hasItem } = useCart();
+  const { addItem } = useCart();
 
   const selected = selectedIdx >= 0 ? (variants[selectedIdx] ?? null) : null;
   const imageSrc = selected?.photoUrl || product.coverImageUrl || "/yusuf-bhai.webp";
@@ -67,7 +67,8 @@ export default function ProductDetail({ product }: Props) {
                 // pick selected variant metadata for cart
                 const v = selectedIdx >= 0 ? variants[selectedIdx] ?? null : null;
                 const price = v ? (v.discountPrice ?? v.price ?? null) : null;
-                addItem({ id: product._id, name: product.name, imageUrl: imageSrc, brand: product.brand ?? null, size: v?.size ?? null, price }, 1);
+                const itemId = v?.size ? `${product._id}:${v.size}` : product._id;
+                addItem({ id: itemId, name: product.name, imageUrl: imageSrc, brand: product.brand ?? null, size: v?.size ?? null, price }, 1);
               } catch {}
               // fly-to-cart animation
               const srcEl = document.getElementById("product-image");
@@ -103,8 +104,7 @@ export default function ProductDetail({ product }: Props) {
               }
             }}
             aria-busy={isAdding}
-            disabled={hasItem(product._id)}
-            className={`group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-saira font-semibold text-white transition-all duration-200 ${hasItem(product._id) ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary hover:bg-primary/90 border border-primary/30 hover:border-primary/50 shadow-sm hover:shadow'} ${isAdding ? 'scale-95' : 'hover:scale-105'}`}
+            className={`group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-saira font-semibold text-white transition-all duration-200 bg-primary hover:bg-primary/90 border border-primary/30 hover:border-primary/50 shadow-sm hover:shadow ${isAdding ? 'scale-95' : 'hover:scale-105'}`}
           >
             {/* Cart icon */}
             <svg
@@ -119,7 +119,7 @@ export default function ProductDetail({ product }: Props) {
               <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
               <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
             </svg>
-            <span className="font-saira">{hasItem(product._id) ? 'Added' : (isAdding ? 'Adding…' : 'Add to Cart')}</span>
+            <span className="font-saira">{isAdding ? 'Adding…' : 'Add to Cart'}</span>
           </button>
         </div>
       </div>

@@ -47,6 +47,19 @@ body {
   font-family: var(--font-saira);
 }
 
+/* Ensure Saira overrides default body font within a .font-saira scope */
+.font-saira,
+.font-saira p,
+.font-saira span,
+.font-saira div,
+.font-saira a,
+.font-saira button,
+.font-saira input,
+.font-saira textarea,
+.font-saira label {
+  font-family: var(--font-saira) !important;
+}
+
 .font-audiowide {
   font-family: var(--font-audiowide);
   font-weight: 400;

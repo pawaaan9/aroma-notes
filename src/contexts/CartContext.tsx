@@ -46,8 +46,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const addItem: CartContextValue["addItem"] = (item, qty = 1) => {
     setItems((prev) => {
       const idx = prev.findIndex((p) => p.id === item.id);
-      if (idx >= 0) return prev; // prevent duplicates
-      return [...prev, { ...item, quantity: Math.max(1, qty) }];
+      const addQty = Math.max(1, qty);
+      if (idx >= 0) {
+        const next = [...prev];
+        next[idx] = { ...next[idx], quantity: next[idx].quantity + addQty };
+        return next;
+      }
+      return [...prev, { ...item, quantity: addQty }];
     });
   };
 
