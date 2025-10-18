@@ -33,16 +33,16 @@ export default function Header() {
           <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
         </div>
         
-         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[5vw] relative z-10">
+         <div className="container mx-auto flex items-center justify-between px-4 py-2 sm:px-6 lg:px-[5vw] relative z-10">
           {/* Enhanced Logo */}
-          <Link className="flex items-center gap-3 group" href="/">
+          <Link className="flex h-full items-center gap-3 group" href="/">
             <div className="relative">
               <Image
-                src="/logo.png"
+                src="/logo-2.png"
                 alt="Aroma Notes Logo"
-                width={36}
-                height={36}
-                className="h-9 w-9"
+                width={48}
+                height={48}
+                className="h-12 w-12"
                 priority
               />
             </div>
@@ -111,21 +111,21 @@ export default function Header() {
         <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
       </div>
       
-       <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[5vw] relative z-10">
+       <div className="container mx-auto flex items-center justify-between px-4 py-2 sm:px-6 lg:px-[5vw] relative z-10">
         {/* Enhanced Logo */}
-        <Link className="flex items-center gap-3 group" href="/">
+        <Link className="flex h-full items-center gap-3 group" href="/">
           <div className="relative">
             <Image
-              src="/logo.png"
+              src="/logo-2.png"
               alt="Aroma Notes Logo"
-              width={36}
-              height={36}
-              className="h-9 w-9"
+              width={48}
+              height={48}
+              className="h-12 w-12"
               priority
             />
           </div>
           <div className="relative">
-            <h1 className="text-xl font-bold font-smooch bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
+            <h1 className="text-xl font-bold font-audiowide tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
               Aroma Notes
             </h1>
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
