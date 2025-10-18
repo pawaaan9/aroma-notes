@@ -2,25 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function SplashScreen() {
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
 
+  // Show splash on initial load and on every route change
   useEffect(() => {
-    const onReady = () => {
-      // small delay for a smoother transition
-      const t = setTimeout(() => setVisible(false), 250);
-      return () => clearTimeout(t);
-    };
-
-    if (document.readyState === "complete") {
-      return onReady();
-    }
-
-    const handler = () => onReady();
-    window.addEventListener("load", handler, { once: true });
-    return () => window.removeEventListener("load", handler);
-  }, []);
+    setVisible(true);
+    const t = setTimeout(() => setVisible(false), 500);
+    return () => clearTimeout(t);
+  }, [pathname]);
 
   if (!visible) return null;
 
