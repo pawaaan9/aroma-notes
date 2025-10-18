@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white/90 backdrop-blur-sm border-t border-gray-200 relative overflow-hidden">
+      {/* soft gradient accent behind footer */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-amber-100/20 via-rose-100/10 to-transparent"></div>
+      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-[5vw]">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">

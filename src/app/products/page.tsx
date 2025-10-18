@@ -10,11 +10,13 @@ export default async function ProductsPage() {
   const products = await fetchProducts();
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white">
+    <div className="flex min-h-screen w-full flex-col bg-white animate-fade-in-up">
       <Header />
       
       <main className="flex-grow relative">
+        <div className="relative z-20">
         <HeroVideo title="Shop Our Collection" subtitle="Discover artisan fragrances crafted to inspire." />
+        </div>
         {/* Removed all smoke/particle decorative layers for clarity */}
         
         <div className="relative z-20">

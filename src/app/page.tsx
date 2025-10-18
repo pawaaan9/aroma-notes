@@ -8,7 +8,7 @@ export default async function Home() {
   const products = await fetchProducts();
   const featured = products.slice(0, 8);
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white">
+    <div className="flex min-h-screen w-full flex-col bg-white animate-fade-in-up">
       <Header />
       
       <main className="flex-grow">
@@ -52,7 +52,7 @@ export default async function Home() {
               <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
                 <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Exclusive Imports</span>
               </div>
-              <h1 className="text-5xl font-extrabold font-smooch tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x">
+              <h1 className="text-5xl font-extrabold font-smooch tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x shimmer-text">
                 Aroma Notes
               </h1>
             </div>

@@ -5,7 +5,7 @@ import FAQ from "../../components/FAQ";
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
+    <div className="flex min-h-screen flex-col bg-white animate-fade-in-up">
       <Header />
       
       <main className="flex-grow">
@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw]">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6 animate-fade-in-up">
-                <h2 className="text-3xl font-bold font-smooch tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-bold font-smooch tracking-tight text-gray-900 sm:text-4xl shimmer-text">
                   About Aroma Notes
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed font-poppins">

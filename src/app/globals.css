@@ -862,3 +862,70 @@ p, span, div, a, button, input, textarea, label {
 .animate-scale-breathe {
   animation: scale-breathe 4s ease-in-out infinite;
 }
+
+/* Perfume themed global utilities */
+.bg-perfume-paper {
+  background-image: radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.bg-perfume-gradient {
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(251,191,36,0.10), transparent 60%),
+              radial-gradient(900px 500px at 110% 10%, rgba(244,63,94,0.10), transparent 55%),
+              radial-gradient(700px 400px at 50% 120%, rgba(234,179,8,0.10), transparent 55%),
+              linear-gradient(180deg, #ffffff, #faf8f5 60%, #f7f4ef);
+}
+
+.bg-perfume-vignette::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 140px rgba(0,0,0,0.08);
+  z-index: 0;
+}
+
+/* Subtle sparkles drifting across the page */
+@keyframes perfume-sparkle {
+  0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+  20% { opacity: .4; }
+  50% { transform: translateY(-40vh) translateX(10vw) scale(1); opacity: .7; }
+  80% { opacity: .3; }
+  100% { transform: translateY(-80vh) translateX(-10vw) scale(0.9); opacity: 0; }
+}
+
+.perfume-sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.perfume-sparkles .dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(251,191,36,0.9) 0%, rgba(251,191,36,0.3) 60%, transparent 70%);
+  border-radius: 9999px;
+  filter: blur(0.2px);
+  animation: perfume-sparkle 14s linear infinite;
+}
+
+.perfume-sparkles .dot.alt {
+  background: radial-gradient(circle, rgba(244,63,94,0.9) 0%, rgba(244,63,94,0.35) 60%, transparent 70%);
+  animation-duration: 18s;
+}
+
+/* Soft shimmer for headings */
+@keyframes heading-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.shimmer-text {
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(251,191,36,0.55), rgba(0,0,0,0.1));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: heading-shimmer 3.5s ease-in-out infinite;
+}

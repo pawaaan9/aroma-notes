@@ -30,10 +30,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} bg-white font-display text-gray-900 antialiased`}
+        className={`${manrope.variable} bg-white font-display text-gray-900 antialiased bg-perfume-gradient bg-perfume-paper bg-perfume-vignette`}
       >
-        {children}
-        <WhatsAppChat />
+        {/* Floating sparkles layer */}
+        <div className="perfume-sparkles" aria-hidden>
+          <span className="dot" style={{ left: '10%', bottom: '5%' }} />
+          <span className="dot alt" style={{ left: '30%', bottom: '10%' }} />
+          <span className="dot" style={{ left: '55%', bottom: '0%' }} />
+          <span className="dot alt" style={{ left: '75%', bottom: '12%' }} />
+          <span className="dot" style={{ left: '90%', bottom: '8%' }} />
+        </div>
+        <div className="relative z-10">
+          {children}
+          <WhatsAppChat />
+        </div>
       </body>
     </html>
   );
