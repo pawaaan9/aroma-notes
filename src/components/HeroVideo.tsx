@@ -32,7 +32,7 @@ export default function HeroVideo({ title, subtitle }: Props) {
           </h1>
         ) : null}
         {subtitle ? (
-          <p className="mx-auto mt-4 max-w-3xl text-lg opacity-90">{subtitle}</p>
+          <p className="mx-auto mt-4 max-w-3xl text-lg opacity-90 font-saira">{subtitle}</p>
         ) : null}
       </div>
     </section>

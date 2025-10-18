@@ -18,7 +18,7 @@ export default function VariantSelector({ variants, value, onChange }: VariantSe
   const hasDiscount = !!selected && typeof selected.discountPrice === 'number' && typeof selected.price === 'number' && selected.discountPrice < selected.price;
 
   return (
-    <div>
+    <div className="font-saira">
       <div className="flex flex-wrap gap-2">
         {inOrder.map((v, i) => {
           const isActive = i === selectedIdx;

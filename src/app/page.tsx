@@ -1,4 +1,4 @@
-import ProductCard from "../components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select50mlPrice } from "@/lib/sanity";
@@ -50,27 +50,27 @@ export default async function Home() {
           <div className="relative z-30 mx-auto max-w-5xl text-center text-white px-4">
             <div className="animate-fade-in-up">
               <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                <span className="text-amber-300 text-sm font-medium tracking-wider uppercase">Exclusive Imports</span>
+                <span className="text-amber-300 text-sm font-medium tracking-wider uppercase font-saira">Exclusive Imports</span>
               </div>
               <h1 className="text-5xl font-extrabold font-smooch tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x shimmer-text">
                 Aroma Notes
               </h1>
             </div>
             <div className="animate-fade-in-up delay-300">
-              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-100 leading-relaxed font-light font-poppins">
+              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-100 leading-relaxed font-saira">
                 Where every scent tells a story. Discover our exclusive collection of artisanal perfumes, 
                 each bottle a masterpiece of olfactory artistry.
               </p>
             </div>
             <div className="mt-12 animate-fade-in-up delay-500">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
-                  <span className="relative z-10">Explore Collection</span>
+                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-saira text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
+                  <span className="relative z-10 font-saira">Explore Collection</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </a>
-                <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold font-poppins text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
-                  <span className="relative z-10">Our Story</span>
+                <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold font-saira text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
+                  <span className="relative z-10 font-saira">Our Story</span>
                 </a>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default async function Home() {
           <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw] relative z-20">
             <div className="text-center mb-20">
               <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                <span className="text-amber-700 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
+                <span className="text-amber-700 text-sm font-medium tracking-wider uppercase font-saira">Signature Collection</span>
               </div>
               <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
                 Masterpiece Fragrances
@@ -132,8 +132,8 @@ export default async function Home() {
             
             {/* Call to Action */}
             <div className="text-center mt-16 animate-fade-in-up delay-700">
-              <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500/10 to-rose-500/10 border border-amber-400/30 px-8 py-4 text-lg font-semibold text-amber-700 hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300 backdrop-blur-sm" href="/products">
-                <span className="relative z-10">View All Fragrances</span>
+              <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500/10 to-rose-500/10 border border-amber-400/30 px-8 py-4 text-lg font-semibold text-amber-700 hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300 backdrop-blur-sm font-saira" href="/products">
+                <span className="relative z-10 font-saira">View All Fragrances</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
@@ -163,7 +163,7 @@ export default async function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
                 <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                  <span className="text-amber-700 text-sm font-medium tracking-wider uppercase">Our Craft</span>
+                  <span className="text-amber-700 text-sm font-medium tracking-wider uppercase font-saira">Our Craft</span>
                 </div>
                 <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl mb-6">
                   The Art of Perfumery

@@ -21,7 +21,7 @@ export default function MainAccordsChips({ accords }: Props) {
   if (!items.length) return null;
 
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-3 font-saira">
       {items.map((a, i) => (
         <div
           key={`${a.name}-${i}`}

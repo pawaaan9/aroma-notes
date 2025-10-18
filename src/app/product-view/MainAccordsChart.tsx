@@ -42,7 +42,7 @@ export default function MainAccordsChart({ accords }: Props) {
   if (!items.length) return null;
 
   return (
-    <div ref={containerRef} className="space-y-2">
+    <div ref={containerRef} className="space-y-2 font-saira">
       {items.map((a, i) => {
         const pct = Math.max(0, Math.min(100, Number(a.percentage || 0)));
         const color = a?.color?.hex || '#e5e7eb';
@@ -57,7 +57,7 @@ export default function MainAccordsChart({ accords }: Props) {
               }}
             />
             <div className="absolute inset-0 flex items-center justify-between px-3">
-              <span className="text-sm font-semibold text-gray-900">{a?.name}</span>
+              <span className="text-sm font-semibold text-gray-900 font-saira">{a?.name}</span>
             </div>
           </div>
         );

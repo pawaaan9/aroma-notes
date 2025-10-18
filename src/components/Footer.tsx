@@ -7,23 +7,23 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-[5vw]">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">
+            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
               <span className="relative z-10">About</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">
+            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
               <span className="relative z-10">Contact</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">
+            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
               <span className="relative z-10">FAQ</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">
+            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
               <span className="relative z-10">Privacy</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group" href="#">
+            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
               <span className="relative z-10">Terms</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center">
-          <p className="mt-6 text-sm text-gray-500">© 2025 Aroma Notes. All rights reserved.</p>
+          <p className="mt-6 text-sm text-gray-500 font-saira">© 2025 Aroma Notes. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse delay-300"></div>

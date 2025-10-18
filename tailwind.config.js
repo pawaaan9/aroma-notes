@@ -14,11 +14,12 @@ module.exports = {
         "background-dark": "#23190f",
       },
       fontFamily: {
-        display: ["Manrope", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
-        smooch: ["Smooch Sans", "sans-serif"],
-        sans: ["Poppins", "sans-serif"],
-        heading: ["Smooch Sans", "sans-serif"],
+        sans: ["var(--font-poppins)", "Poppins", "system-ui", "sans-serif"],
+        poppins: ["var(--font-poppins)", "Poppins", "sans-serif"],
+        smooch: ["var(--font-smooch)", "Smooch Sans", "sans-serif"],
+        heading: ["var(--font-smooch)", "Smooch Sans", "sans-serif"],
+        saira: ["var(--font-saira)", "Saira", "sans-serif"],
+        exo2: ["var(--font-exo2)", "Exo 2", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.25rem",

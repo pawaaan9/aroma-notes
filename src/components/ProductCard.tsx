@@ -47,16 +47,16 @@ export default function ProductCard({
           {/* Removed floating view pill on hover over image */}
         </div>
         <div className="mt-4 flex flex-col">
-          <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 font-saira">
             {name}
           </h3>
           <div className="mt-2 flex items-center gap-2">
             {originalPrice && (
-              <span className="text-sm line-through text-gray-400 font-medium">
+              <span className="text-sm line-through text-gray-400 font-medium font-saira">
                 {originalPrice}
               </span>
             )}
-            <p className="text-base font-bold text-primary">
+            <p className="text-base font-bold text-primary font-saira">
               {price}
             </p>
           </div>
@@ -113,11 +113,11 @@ export default function ProductCard({
                 {originalPrice}
               </p>
             )}
-            <p className="text-base font-bold text-primary">{price}</p>
+            <p className="text-base font-bold text-primary font-saira">{price}</p>
           </div>
         </div>
         <div className="pt-1">
-          <div className="group w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-400/60 bg-white text-amber-700 font-semibold py-2.5 px-4 transition-all duration-300 hover:border-rose-400 hover:text-rose-600">
+          <div className="group w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-400/60 bg-white text-amber-700 font-semibold py-2.5 px-4 transition-all duration-300 hover:border-rose-400 hover:text-rose-600 font-saira">
             <span>View</span>
             <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />

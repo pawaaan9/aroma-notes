@@ -1,12 +1,31 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Poppins, Smooch_Sans, Saira, Exo_2 } from "next/font/google";
 import WhatsAppChat from "@/components/WhatsAppChat";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
+  style: ["normal","italic"],
+});
+
+const smooch = Smooch_Sans({
+  variable: "--font-smooch",
+  subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
+});
+
+const saira = Saira({
+  variable: "--font-saira",
+  subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
+});
+
+const exo2 = Exo_2({
+  variable: "--font-exo2",
+  subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} bg-white font-display text-gray-900 antialiased bg-perfume-gradient bg-perfume-paper bg-perfume-vignette`}
+        className={`${poppins.variable} ${smooch.variable} ${saira.variable} ${exo2.variable} bg-white font-sans text-gray-900 antialiased bg-perfume-gradient bg-perfume-paper bg-perfume-vignette`}
       >
         {/* Floating sparkles layer */}
         <div className="perfume-sparkles" aria-hidden>

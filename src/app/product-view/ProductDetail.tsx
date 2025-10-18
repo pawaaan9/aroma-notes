@@ -27,7 +27,7 @@ export default function ProductDetail({ product }: Props) {
           className="object-cover"
         />
       </div>
-      <div>
+      <div className="font-saira">
         <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
         {product.brand ? (
           <p className="text-sm text-gray-600 mt-1">{product.brand}</p>
@@ -35,15 +35,15 @@ export default function ProductDetail({ product }: Props) {
 
         {variants.length ? (
           <div className="mt-8">
-            <h2 className="text-gray-900 font-semibold mb-3">AvailableSizes</h2>
+            <h2 className="text-gray-900 font-semibold mb-3">Available</h2>
             <VariantSelector variants={variants} value={selectedIdx} onChange={setSelectedIdx} />
           </div>
         ) : null}
 
         {product.descriptionText ? (
           <div className="mt-10">
-            <h3 className="text-gray-900 font-semibold mb-3">Description</h3>
-            <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+            <h3 className="text-gray-900 font-semibold mb-3 font-saira">Description</h3>
+            <p className="text-gray-700 leading-relaxed whitespace-pre-wrap font-saira">
               {product.descriptionText}
             </p>
           </div>
@@ -51,13 +51,13 @@ export default function ProductDetail({ product }: Props) {
 
         {product.mainAccords?.length ? (
           <div className="mt-10">
-            <h3 className="text-gray-900 font-semibold mb-3">Main Accords</h3>
+            <h3 className="text-gray-900 font-semibold mb-3 font-saira">Main Accords</h3>
             <MainAccordsChart accords={product.mainAccords} />
           </div>
         ) : null}
 
         <div className="mt-10">
-          <button className="bg-primary/90 hover:bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
+          <button className="bg-primary/90 hover:bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 font-saira">
             Add to Cart
           </button>
         </div>
