@@ -6,9 +6,10 @@ import Link from "next/link";
 
 interface HeaderProps {
   currentPage?: 'home' | 'products' | 'about';
+  dark?: boolean; // when true, use dark text (black) for header words
 }
 
-export default function Header({ currentPage = 'home' }: HeaderProps) {
+export default function Header({ currentPage = 'home', dark = false }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -45,7 +46,7 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
               />
             </div>
             <div className="relative">
-              <h1 className="text-xl font-bold font-audiowide tracking-wide text-white transition-all duration-300 group-hover:text-primary">
+              <h1 className={`text-xl font-bold font-audiowide tracking-wide ${dark ? 'text-gray-900' : 'text-white'} transition-all duration-300 group-hover:text-primary`}>
                 Aroma Notes
               </h1>
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -54,15 +55,15 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
 
           {/* Enhanced Desktop Navigation */}
           <nav className="hidden items-center gap-8 md:flex">
-            <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/">
+            <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Home</span>
               <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'home' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
             </Link>
-            <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/products">
+            <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/products">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Products</span>
               <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'products' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
             </Link>
-            <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/about">
+            <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/about">
               <span className="relative z-10 transition-all duration-300 group-hover:scale-105">About</span>
               <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
             </Link>
@@ -105,7 +106,7 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
             />
           </div>
           <div className="relative">
-            <h1 className="text-xl font-bold font-audiowide tracking-wide text-white transition-all duration-300 group-hover:text-primary">
+            <h1 className={`text-xl font-bold font-audiowide tracking-wide ${dark ? 'text-gray-900' : 'text-white'} transition-all duration-300 group-hover:text-primary`}>
               Aroma Notes
             </h1>
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -114,15 +115,15 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
 
         {/* Enhanced Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/">
+          <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Home</span>
             <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'home' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
           </Link>
-          <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/products">
+          <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/products">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Products</span>
             <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'products' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
           </Link>
-          <Link className="text-sm font-medium font-saira uppercase text-white hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg" href="/about">
+          <Link className={`text-sm font-medium font-saira uppercase ${dark ? 'text-gray-900' : 'text-white'} hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg`} href="/about">
             <span className="relative z-10 transition-all duration-300 group-hover:scale-105">About</span>
             <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform transition-transform duration-300 origin-center ${currentPage === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
           </Link>

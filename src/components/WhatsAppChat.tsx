@@ -2,11 +2,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 import WhatsAppLogo from "@/assets/whatsapp.png";
 
 export default function WhatsAppChat() {
   const [isWhatsOpen, setIsWhatsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const { count, items, removeItem, clear } = useCart();
   const whatsappNumber = "94721922332"; // Sri Lanka number
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   const toggleWhats = () => {
@@ -49,27 +51,78 @@ export default function WhatsAppChat() {
 
               {/* Cart content */}
               <div className="p-4 bg-gray-50 min-h-[160px] flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="text-gray-700 text-sm font-saira">Your cart is empty.</div>
+                <div className="space-y-3 max-h-64 overflow-auto pr-1 no-scrollbar">
+                  {items.length === 0 ? (
+                    <div className="text-gray-700 text-sm font-saira">Your cart is empty.</div>
+                  ) : (
+                    items.map((it) => (
+                      <div key={it.id} className="flex items-center gap-3 bg-white rounded-md p-2 border border-gray-200">
+                        <div className="h-10 w-10 rounded-md overflow-hidden bg-gray-100 border border-gray-200">
+                          {it.imageUrl ? (
+                            <img src={it.imageUrl} alt={it.name} className="h-full w-full object-cover" />
+                          ) : null}
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-sm font-semibold text-gray-900 line-clamp-1">{it.name}</div>
+                          <div className="text-xs text-gray-500 line-clamp-1">{it.brand ?? ''} {it.size ? `• ${it.size}` : ''}</div>
+                          {typeof it.price === 'number' ? (
+                            <div className="text-xs font-medium text-gray-700 mt-0.5">LKR {new Intl.NumberFormat('en-LK').format(it.price)}</div>
+                          ) : null}
+                        </div>
+                        <button
+                          className="text-gray-400 hover:text-rose-600 transition-colors p-1"
+                          aria-label="Remove item"
+                          onClick={() => removeItem(it.id)}
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    ))
+                  )}
                 </div>
-                <a
-                  href="/products"
-                  className="mt-4 w-full bg-gradient-to-r from-amber-500 to-rose-500 text-white rounded-lg py-3 px-4 font-semibold hover:shadow-lg transition-all duration-300 text-center font-saira uppercase"
-                >
-                  Browse Products
-                </a>
+                {items.length === 0 ? (
+                  <a
+                    href="/products"
+                    className="mt-4 w-full bg-gradient-to-r from-amber-500 to-rose-500 text-white rounded-lg py-3 px-4 font-semibold hover:shadow-lg transition-all duration-300 text-center font-saira uppercase"
+                  >
+                    Browse Products
+                  </a>
+                ) : (
+                  <div className="mt-4 grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => clear()}
+                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg py-3 px-4 font-semibold transition-all duration-200 text-center font-saira uppercase border border-gray-300"
+                    >
+                      Clear
+                    </button>
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 px-4 font-semibold transition-all duration-200 text-center font-saira uppercase"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           )}
           {/* Cart button */}
           <button
             onClick={toggleCart}
-            className="bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600 text-white rounded-full p-2.5 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center w-14 h-14"
+            className="relative bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600 text-white rounded-full p-2.5 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center w-14 h-14"
             title="Open cart"
             aria-expanded={isCartOpen}
             aria-controls="cart-panel"
+            id="cart-fab"
           >
             <ShoppingCart size={28} strokeWidth={2.2} />
+            {count > 0 ? (
+              <span className="absolute -top-1 -right-1 h-5 min-w-5 px-1 rounded-full bg-white text-amber-600 text-xs font-bold flex items-center justify-center shadow">
+                {count}
+              </span>
+            ) : null}
           </button>
         </div>
 

@@ -946,3 +946,12 @@ label.font-saira {
   color: transparent;
   animation: heading-shimmer 3.5s ease-in-out infinite;
 }
+
+/* Hide scrollbars utility (for cart list, etc.) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
