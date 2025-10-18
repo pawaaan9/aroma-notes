@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Smooch_Sans, Saira, Exo_2 } from "next/font/google";
+import { Poppins, Smooch_Sans, Saira, Exo_2, Audiowide } from "next/font/google";
 import WhatsAppChat from "@/components/WhatsAppChat";
 import "./globals.css";
 
@@ -28,6 +28,12 @@ const exo2 = Exo_2({
   weight: ["100","200","300","400","500","600","700","800","900"],
 });
 
+const audiowide = Audiowide({
+  variable: "--font-audiowide",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
   description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes and signature fragrances, each bottle a masterpiece of olfactory artistry. Hand-crafted with passion, precision, and the finest ingredients from around the world.",
@@ -49,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${smooch.variable} ${saira.variable} ${exo2.variable} bg-white font-sans text-gray-900 antialiased bg-perfume-gradient bg-perfume-paper bg-perfume-vignette`}
+        className={`${poppins.variable} ${smooch.variable} ${saira.variable} ${exo2.variable} ${audiowide.variable} bg-white font-sans text-gray-900 antialiased bg-perfume-gradient bg-perfume-paper bg-perfume-vignette`}
       >
         {/* Floating sparkles layer */}
         <div className="perfume-sparkles" aria-hidden>

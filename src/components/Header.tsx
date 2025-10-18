@@ -51,7 +51,7 @@ export default function Header() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-ping"></div>
             </div>
             <div className="relative">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
+              <h1 className="text-xl font-bold font-audiowide tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary group-hover:via-orange-400 group-hover:to-primary group-hover:animate-gradient-x">
                 Aroma Notes
               </h1>
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

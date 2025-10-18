@@ -7,6 +7,7 @@
   --font-poppins: "Poppins", sans-serif;
   --font-smooch: "Smooch Sans", sans-serif;
   --font-saira: "Saira", sans-serif;
+  --font-audiowide: "Audiowide", sans-serif;
 }
 
 @theme inline {
@@ -44,6 +45,11 @@ body {
 
 .font-saira {
   font-family: var(--font-saira);
+}
+
+.font-audiowide {
+  font-family: var(--font-audiowide);
+  font-weight: 400;
 }
 
 /* Apply fonts to all text elements */
