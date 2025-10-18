@@ -65,12 +65,12 @@ export default async function Home() {
             <div className="mt-12 animate-fade-in-up delay-500">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-saira text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
-                  <span className="relative z-10 font-saira">Explore Collection</span>
+                  <span className="relative z-10 font-saira uppercase">Explore Collection</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </a>
                 <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold font-saira text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
-                  <span className="relative z-10 font-saira">Our Story</span>
+                  <span className="relative z-8 font-saira uppercase">Our Story</span>
                 </a>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default async function Home() {
               <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
                 Masterpiece Fragrances
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed font-poppins animate-fade-in-up delay-300">
+              <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed font-saira animate-fade-in-up delay-300">
                 Each fragrance is a carefully crafted symphony of notes, designed to evoke emotions and create lasting memories.
               </p>
               <div className="w-32 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mt-8 animate-fade-in-up delay-500"></div>
@@ -133,7 +133,7 @@ export default async function Home() {
             {/* Call to Action */}
             <div className="text-center mt-16 animate-fade-in-up delay-700">
               <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500/10 to-rose-500/10 border border-amber-400/30 px-8 py-4 text-lg font-semibold text-amber-700 hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300 backdrop-blur-sm font-saira" href="/products">
-                <span className="relative z-10 font-saira">View All Fragrances</span>
+                <span className="relative z-10 font-saira uppercase">View All Fragrances</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
@@ -168,7 +168,7 @@ export default async function Home() {
                 <h2 className="text-4xl font-bold font-smooch tracking-tight text-gray-900 sm:text-5xl mb-6">
                   The Art of Perfumery
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed font-poppins mb-8">
+                <p className="text-lg text-gray-600 leading-relaxed font-saira mb-8">
                   At Aroma Notes, we believe that fragrance is more than just a scent—it&apos;s an expression of personality, 
                   a memory in a bottle, and a journey of the senses. Our master perfumers combine traditional techniques 
                   with innovative approaches to create unique olfactory experiences.
@@ -176,15 +176,15 @@ export default async function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-700">Hand-selected ingredients from around the world</span>
+                    <span className="text-gray-700 font-saira">Hand-selected ingredients from around the world</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-700">Small-batch production for exceptional quality</span>
+                    <span className="text-gray-700 font-saira">Small-batch production for exceptional quality</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-700">Sustainable and ethical sourcing practices</span>
+                    <span className="text-gray-700 font-saira">Sustainable and ethical sourcing practices</span>
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export default async function Home() {
                         </svg>
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">Craftsmanship</h3>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 font-saira">
                         Every bottle is a testament to our commitment to excellence and attention to detail.
                       </p>
                     </div>

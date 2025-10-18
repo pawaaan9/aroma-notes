@@ -1,4 +1,4 @@
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import Header from "../../components/Header";
 import MobileFilters from "../../components/MobileFilters";
 import HeroVideo from "../../components/HeroVideo";
@@ -30,8 +30,8 @@ export default async function ProductsPage() {
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">AVAILABILITY</h3>
                   </div>
-                  <label className="flex items-center gap-3 text-sm text-gray-700">
-                    <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
+                  <label className="flex items-center gap-3 text-sm text-gray-700 font-saira">
+                    <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary font-saira" />
                     In stock only
                   </label>
                 </div>
@@ -56,7 +56,7 @@ export default async function ProductsPage() {
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">GENDER</h3>
                   </div>
-                  <div className="space-y-2 text-sm text-gray-700">
+                  <div className="space-y-2 text-sm text-gray-700 font-saira">
                     <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Female</label>
                     <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Male</label>
                     <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Unisex</label>
@@ -68,7 +68,7 @@ export default async function ProductsPage() {
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">BRAND INSPIRATION</h3>
                   </div>
-                  <div className="space-y-2 text-sm text-gray-700">
+                  <div className="space-y-2 text-sm text-gray-700 font-saira">
                     <label className="flex items-center gap-3 py-1">
                       <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> YB Originals
                     </label>

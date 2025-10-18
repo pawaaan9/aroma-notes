@@ -12,19 +12,19 @@ export default function Footer() {
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
             <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10 font-saira uppercase">Contact</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
             <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10">FAQ</span>
+              <span className="relative z-10 font-saira uppercase">FAQ</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
             <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10">Privacy</span>
+              <span className="relative z-10 font-saira uppercase">Privacy</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
             <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10">Terms</span>
+              <span className="relative z-10 font-saira uppercase">Terms</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
             </a>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center">
-          <p className="mt-6 text-sm text-gray-500 font-saira">© 2025 Aroma Notes. All rights reserved.</p>
+          <p className="mt-6 text-sm text-gray-500 font-saira uppercase">© 2025 Aroma Notes. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse delay-300"></div>

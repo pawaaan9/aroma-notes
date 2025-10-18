@@ -56,6 +56,12 @@ p, span, div, a, button, input, textarea, label {
   font-family: var(--font-poppins);
 }
 
+/* Ensure Saira utility overrides element defaults for filter labels */
+.font-saira label,
+label.font-saira {
+  font-family: var(--font-saira) !important;
+}
+
 /* Specific styling for different text elements */
 .heading-primary {
   font-family: var(--font-smooch);

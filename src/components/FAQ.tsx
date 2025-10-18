@@ -52,7 +52,7 @@ export default function FAQ() {
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mb-6"></div>
           </div>
           <div className="animate-fade-in-up delay-300">
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed  font-saira">
               Find answers to common questions about our fragrances, ordering, and care.
             </p>
           </div>
@@ -128,14 +128,14 @@ export default function FAQ() {
           <h3 className="text-xl font-semibold text-gray-900 mb-3">
             Didn&apos;t find your answer?
           </h3>
-          <p className="text-gray-700 mb-5">
+          <p className="text-gray-700 mb-5 font-saira">
             Our customer service team is here to help! Feel free to reach out through WhatsApp or contact us directly.
           </p>
           <a
             href="https://wa.me/94721922332"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-amber-500 to-rose-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="inline-block bg-gradient-to-r from-amber-500 to-rose-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 font-saira uppercase"
           >
             Chat with Us on WhatsApp
           </a>

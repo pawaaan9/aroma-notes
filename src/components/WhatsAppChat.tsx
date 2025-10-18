@@ -19,7 +19,7 @@ export default function WhatsAppChat() {
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 flex justify-between items-center">
               <div>
                 <h3 className="font-bold text-lg">Aroma Notes</h3>
-                <p className="text-xs text-green-100">Typically replies within minutes</p>
+                <p className="text-xs text-green-100 font-saira">Typically replies within minutes</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
@@ -36,7 +36,7 @@ export default function WhatsAppChat() {
               <div className="space-y-3">
                 <div className="flex justify-start">
                   <div className="bg-white rounded-lg p-3 max-w-xs text-sm shadow-sm">
-                    <p className="text-gray-900 font-medium">👋 Hi, feel free to contact us if you have any questions!</p>
+                    <p className="text-gray-900 font-medium font-saira">👋 Hi, feel free to contact us if you have any questions!</p>
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function WhatsAppChat() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 w-full bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg py-3 px-4 font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-center"
+                className="mt-4 w-full bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg py-3 px-4 font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-center font-saira uppercase"
               >
                 <Image
                   src={WhatsAppLogo}

@@ -62,8 +62,8 @@ export default function MobileFilters() {
                 <div className="mb-3 flex items-center justify-between">
                   <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">AVAILABILITY</h4>
                 </div>
-                <label className="flex items-center gap-3 text-sm text-gray-700">
-                  <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
+                <label className="flex items-center gap-3 text-sm text-gray-700 font-saira">
+                  <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary font-saira" />
                   In stock only
                 </label>
               </section>
@@ -88,7 +88,7 @@ export default function MobileFilters() {
                 <div className="mb-3 flex items-center justify-between">
                   <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">GENDER</h4>
                 </div>
-                <div className="space-y-2 text-sm text-gray-700">
+                <div className="space-y-2 text-sm text-gray-700 font-saira">
                   <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Female</label>
                   <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Male</label>
                   <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Unisex</label>
@@ -100,7 +100,7 @@ export default function MobileFilters() {
                 <div className="mb-3 flex items-center justify-between">
                   <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">BRAND INSPIRATION</h4>
                 </div>
-                <div className="space-y-2 text-sm text-gray-700">
+                <div className="space-y-2 text-sm text-gray-700 font-saira">
                   <label className="flex items-center gap-3">
                     <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> YB Originals
                   </label>
