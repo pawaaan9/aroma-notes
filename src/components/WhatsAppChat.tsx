@@ -63,7 +63,7 @@ export default function WhatsAppChat() {
         {/* Floating Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full p-3 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center w-16 h-16"
+          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full p-2.5 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center w-14 h-14"
           title="Chat with us on WhatsApp"
         >
           <Image
