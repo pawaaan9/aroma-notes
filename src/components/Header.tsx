@@ -33,7 +33,7 @@ export default function Header() {
           <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
         </div>
         
-         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[10vw] relative z-10">
+         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[5vw] relative z-10">
           {/* Enhanced Logo */}
           <Link className="flex items-center gap-3 group" href="/">
             <div className="relative">
@@ -118,7 +118,7 @@ export default function Header() {
         <div className="absolute bottom-0 left-1/3 w-20 h-20 bg-yellow-500/5 rounded-full blur-lg animate-float"></div>
       </div>
       
-       <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[10vw] relative z-10">
+       <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-[5vw] relative z-10">
         {/* Enhanced Logo */}
         <Link className="flex items-center gap-3 group" href="/">
           <div className="relative">

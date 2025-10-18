@@ -11,6 +11,7 @@ interface ProductCardProps {
   delay?: string;
   showQuickAdd?: boolean;
   href?: string;
+  label?: string;
 }
 
 export default function ProductCard({ 
@@ -21,13 +22,19 @@ export default function ProductCard({
   imageAlt, 
   delay = "delay-100",
   showQuickAdd = false,
-  href
+  href,
+  label
 }: ProductCardProps) {
   if (showQuickAdd) {
     // Products page layout with Quick Add button
     const CardInner = (
       <div className={`group relative animate-fade-in-up ${delay}`}>
-        <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
+        <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 relative">
+          {label ? (
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-3 py-1 rounded bg-gray-900/90 text-white text-[10px] tracking-widest uppercase shadow">
+              {label}
+            </div>
+          ) : null}
           <Image
             alt={imageAlt}
             className="h-full w-full object-cover object-center transition-transform duration-300"
@@ -63,6 +70,11 @@ export default function ProductCard({
       <div className="relative rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 transform group-hover:shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-400/60 group-hover:-translate-y-1">
       <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
+          {label ? (
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-3 py-1 rounded bg-gray-900/90 text-white text-[10px] tracking-widest uppercase shadow">
+              {label}
+            </div>
+          ) : null}
           <Image
             alt={imageAlt}
             className="h-full w-full object-cover object-center transition-all duration-500"

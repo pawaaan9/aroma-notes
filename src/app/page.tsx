@@ -1,11 +1,11 @@
 import ProductCard from "../components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { fetchProducts, selectDisplayPrice, selectPrimaryImage, SanityProduct } from "@/lib/sanity";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
 
 export default async function Home() {
-  const products: SanityProduct[] = await fetchProducts();
+  const products = await fetchProducts();
   const featured = products.slice(0, 8);
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
@@ -34,9 +34,9 @@ export default async function Home() {
             loop
             playsInline
             className="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: 'center center' }}
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
+            <source src="/hero-mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           
@@ -90,7 +90,7 @@ export default async function Home() {
         <section id="products" className="py-20 sm:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
           {/* Removed background clouds for a crisp light section */}
           
-          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw] relative z-20">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw] relative z-20">
             <div className="text-center mb-20">
               <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">
                 <span className="text-amber-700 text-sm font-medium tracking-wider uppercase">Signature Collection</span>
@@ -155,7 +155,7 @@ export default async function Home() {
             <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-rose-200/3 rounded-full blur-3xl animate-float-reverse delay-1000"></div>
           </div>
           
-          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw] relative z-20">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw] relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
                 <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-rose-500/10 rounded-full border border-amber-400/30 backdrop-blur-sm">

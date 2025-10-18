@@ -20,6 +20,8 @@ export type SanityProduct = {
     percentage?: number | null;
     color?: { hex?: string | null } | null;
   }> | null;
+  gender?: 'male' | 'female' | 'unisex' | null;
+  perfumeType?: 'originals' | 'inspired' | null;
 };
 
 const SANITY_PROJECT_ID = 'ief0s3av';
@@ -39,6 +41,8 @@ export async function fetchProducts(): Promise<SanityProduct[]> {
     name,
     slug,
     brand,
+    gender,
+    perfumeType,
     "coverImageUrl": coverImage.asset->url,
     variants[]{
       size,

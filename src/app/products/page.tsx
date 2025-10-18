@@ -1,5 +1,7 @@
 import ProductCard from "../../components/ProductCard";
 import Header from "../../components/Header";
+import MobileFilters from "../../components/MobileFilters";
+import HeroVideo from "../../components/HeroVideo";
 import Footer from "../../components/Footer";
 import { fetchProducts, selectDisplayPrice, selectPrimaryImage } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
@@ -12,36 +14,82 @@ export default async function ProductsPage() {
       <Header />
       
       <main className="flex-grow relative">
+        <HeroVideo title="Shop Our Collection" subtitle="Discover artisan fragrances crafted to inspire." />
         {/* Removed all smoke/particle decorative layers for clarity */}
         
         <div className="relative z-20">
-        <div className="mx-auto max-w-none px-4 py-12 sm:px-6 lg:px-[10vw]">
-          <div className="mb-12">
-            <h2 className="text-4xl font-extrabold font-smooch tracking-tight text-gray-900 sm:text-5xl animate-fade-in-up">
-              Shop Our Collection
-            </h2>
-            <div className="mt-6 flex flex-wrap gap-2 animate-fade-in-up delay-300">
-              <button className="rounded-full bg-primary px-4 py-2 text-sm font-medium font-poppins text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
-                All
-              </button>
-              <button className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium font-poppins text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 hover:scale-105">
-                Perfume
-              </button>
-              <button className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium font-poppins text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 hover:scale-105">
-                Candles
-              </button>
-              <button className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium font-poppins text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 hover:scale-105">
-                Diffusers
-              </button>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="mx-auto max-w-none px-4 py-12 sm:px-6 lg:px-[5vw]">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+            {/* Sidebar filters visible on desktop only */}
+            <aside className="hidden lg:block lg:col-span-3">
+              <div className="sticky top-28 space-y-10">
+                {/* Availability */}
+                <div>
+                  <div className="mb-3 flex items-center justify-between">
+                    <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">AVAILABILITY</h3>
+                  </div>
+                  <label className="flex items-center gap-3 text-sm text-gray-700">
+                    <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
+                    In stock only
+                  </label>
+                </div>
+
+                {/* Price */}
+                <div>
+                  <div className="mb-3 flex items-center justify-between">
+                    <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">PRICE</h3>
+                  </div>
+                  <div className="py-2">
+                    <input type="range" min={0} max={400} defaultValue={200} className="w-full accent-primary" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <input className="w-24 rounded-md border border-gray-300 px-3 py-2 text-sm" placeholder="Min" />
+                    <span className="text-gray-400">to</span>
+                    <input className="w-24 rounded-md border border-gray-300 px-3 py-2 text-sm" placeholder="Max" />
+                  </div>
+                </div>
+
+                {/* Gender */}
+                <div>
+                  <div className="mb-3 flex items-center justify-between">
+                    <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">GENDER</h3>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-700">
+                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Female</label>
+                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Male</label>
+                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Unisex</label>
+                  </div>
+                </div>
+
+                {/* Brand Inspiration */}
+                <div>
+                  <div className="mb-3 flex items-center justify-between">
+                    <h3 className="text-xs font-semibold tracking-[0.2em] text-gray-700">BRAND INSPIRATION</h3>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-700">
+                    <label className="flex items-center gap-3 py-1">
+                      <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> YB Originals
+                    </label>
+                    <label className="flex items-center gap-3 py-1">
+                      <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Inspired
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            {/* Product grid */}
+            <section className="lg:col-span-9">
+              <div className="mb-8 flex items-end justify-end">
+                <div className="lg:hidden"><MobileFilters /></div>
+              </div>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {products.map((product, index) => {
               const imageSrc = selectPrimaryImage(product) ?? "/yusuf-bhai.webp";
               const priceNumber = selectDisplayPrice(product);
               const displayPrice = priceNumber != null ? formatLkr(priceNumber) : "";
               const path = `/product-view/${product.slug?.current ?? product._id}`;
+                 const label = product.brand ? `INSPIRED BY ${product.brand.toUpperCase()}` : undefined;
               return (
                 <div key={product._id}>
                   <ProductCard
@@ -52,10 +100,13 @@ export default async function ProductsPage() {
                     delay={`delay-${(index + 1) * 100}`}
                     showQuickAdd={true}
                     href={path}
+                       label={label}
                   />
                 </div>
               );
             })}
+              </div>
+            </section>
           </div>
         </div>
         </div>

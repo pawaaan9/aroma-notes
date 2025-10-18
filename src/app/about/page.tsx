@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeroVideo from "../../components/HeroVideo";
 
 export default function AboutPage() {
   return (
@@ -7,63 +8,17 @@ export default function AboutPage() {
       <Header />
       
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative flex min-h-[60vh] items-center justify-center bg-cover bg-center py-20 md:py-32 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-[20s] ease-out hover:scale-110"
-            style={{
-              backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDX5QhdEJ-tQlzGoHnp6UgtcqsGfaue7KLgSqNWbEaQmPjj5CN7Lvh9xu9kxpnwJEfwLXIIfSqkqCltlkkrSO5xADOCHk3uoioz7r-h9bOPjSL5tzi3mk8Zhwre08RNAgw93QkoYGF7lJBDTSrzZY4drKTVabAMhwt3Zg1dZOKL13AF6tF31iNzIsl6dPdrs1bI0GK7uMr3p3SYNdSx1reHlSNnq1al3wCibpgXs7CW6UXKYAnaGGNeah4uZ5yfdGaE83ebfA9-iy4")'
-            }}
+        {/* Shared hero video across screens */}
+        <section>
+          <HeroVideo
+            title="Crafting Scents, Defining Moments"
+            subtitle="At Aroma Essence, fragrance is more than a scent; it's an expression of individuality, a memory in the making, and a journey of the senses."
           />
-          
-          {/* Animated background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse animate-float"></div>
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000 animate-float-reverse"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-2xl animate-pulse delay-500 animate-float-slow"></div>
-            <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-orange-500/20 rounded-full blur-xl animate-bounce delay-700"></div>
-            <div className="absolute bottom-1/4 left-1/3 w-48 h-48 bg-yellow-500/10 rounded-full blur-2xl animate-ping delay-1000"></div>
-          </div>
-          
-          {/* Floating particles */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float-particle delay-300"></div>
-            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-orange-400 rounded-full animate-float-particle delay-700"></div>
-            <div className="absolute bottom-1/3 left-1/2 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-float-particle delay-1000"></div>
-            <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-primary rounded-full animate-float-particle delay-500"></div>
-            <div className="absolute bottom-1/4 right-1/2 w-2 h-2 bg-orange-300 rounded-full animate-float-particle delay-1200"></div>
-          </div>
-          
-          <div className="mx-auto max-w-none px-4 lg:px-[10vw] text-center text-gray-900 relative z-10">
-            <div className="animate-fade-in-up">
-              <h1 className="text-4xl font-extrabold font-smooch leading-tight tracking-tight md:text-6xl bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent animate-gradient-x hover:animate-pulse">
-                Crafting Scents, Defining Moments
-              </h1>
-            </div>
-            <div className="animate-fade-in-up delay-300">
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-700 leading-relaxed font-poppins animate-typewriter">
-                At Aroma Essence, fragrance is more than a scent; it&apos;s an expression of individuality, a memory in the making, and a journey of the senses.
-              </p>
-            </div>
-            <div className="animate-fade-in-up delay-500">
-              <button className="mt-8 group inline-block rounded-lg bg-gradient-to-r from-primary to-orange-600 px-8 py-4 text-base font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-primary/25 hover:shadow-2xl hover:scale-110 hover:-translate-y-2 relative overflow-hidden animate-bounce-subtle">
-                <span className="relative z-10 flex items-center gap-2">
-                  Explore Our Collection
-                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </button>
-            </div>
-          </div>
         </section>
 
         {/* Our Story Section */}
         <section className="py-16 sm:py-24 bg-white">
-          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw]">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw]">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6 animate-fade-in-up">
                 <h2 className="text-3xl font-bold font-smooch tracking-tight text-gray-900 sm:text-4xl">
@@ -94,7 +49,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="bg-gray-50 py-16 sm:py-24">
-          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw]">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw]">
             <div className="mx-auto max-w-3xl text-center mb-16">
               <div className="animate-fade-in-up">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
@@ -171,7 +126,7 @@ export default function AboutPage() {
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/5 via-transparent to-orange-600/5 animate-pulse"></div>
           </div>
           
-          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[10vw] relative z-10">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw] relative z-10">
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="group text-center animate-fade-in-up delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
