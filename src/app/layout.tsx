@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Smooch_Sans, Saira, Exo_2, Audiowide } from "next/font/google";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import SplashScreen from "@/components/SplashScreen";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -66,6 +67,7 @@ export default function RootLayout({
           <span className="dot" style={{ left: '90%', bottom: '8%' }} />
         </div>
         <div className="relative z-10">
+          <SplashScreen />
           {children}
           <WhatsAppChat />
         </div>
