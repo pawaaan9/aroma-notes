@@ -74,17 +74,6 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
             </Link>
           </nav>
 
-          {/* Enhanced Desktop Actions */}
-          <div className="hidden items-center gap-4 md:flex">
-            {/* Cart Button */}
-            <button className="group relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gray-100 to-gray-200 text-gray-700 hover:from-primary/10 hover:to-orange-600/10 hover:text-primary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-primary/25 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg" className="relative z-10 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12">
-                <path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm96,0a16,16,0,1,1-16-16A16,16,0,0,1,192,216ZM232,80H68.7L61.9,51.2A16,16,0,0,0,46.1,40H24A16,16,0,0,1,24,8H46.1A48,48,0,0,1,93.3,56H232a8,8,0,0,1,0,16Z"></path>
-              </svg>
-              <div className="absolute inset-0 rounded-full border-2 border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-ping"></div>
-            </button>
-          </div>
 
           {/* Simple Mobile Menu Button */}
           <button 
@@ -152,17 +141,6 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
           </Link>
         </nav>
 
-        {/* Enhanced Desktop Actions */}
-        <div className="hidden items-center gap-4 md:flex">
-          {/* Cart Button */}
-          <button className="group relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gray-100 to-gray-200 text-gray-700 hover:from-primary/10 hover:to-orange-600/10 hover:text-primary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-primary/25 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg" className="relative z-10 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12">
-              <path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm96,0a16,16,0,1,1-16-16A16,16,0,0,1,192,216ZM232,80H68.7L61.9,51.2A16,16,0,0,0,46.1,40H24A16,16,0,0,1,24,8H46.1A48,48,0,0,1,93.3,56H232a8,8,0,0,1,0,16Z"></path>
-            </svg>
-            <div className="absolute inset-0 rounded-full border-2 border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-ping"></div>
-          </button>
-        </div>
 
         {/* Simple Mobile Menu Button */}
         <button 
@@ -213,16 +191,6 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
             >
               About
             </Link>
-            
-            {/* Mobile Actions */}
-            <div className="flex items-center justify-center pt-4 border-t border-gray-200">
-              <button className="flex items-center gap-2 text-gray-700 hover:text-primary transition-all duration-300 px-4 py-2 rounded-lg hover:bg-primary/10">
-                <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm96,0a16,16,0,1,1-16-16A16,16,0,0,1,192,216ZM232,80H68.7L61.9,51.2A16,16,0,0,0,46.1,40H24A16,16,0,0,1,24,8H46.1A48,48,0,0,1,93.3,56H232a8,8,0,0,1,0,16Z"></path>
-                </svg>
-                <span className="text-sm">Cart</span>
-              </button>
-            </div>
           </nav>
         </div>
         </div>

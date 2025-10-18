@@ -15,7 +15,7 @@ export default async function Home() {
       
       <main className="flex-grow">
         {/* Hero Section with Video Background */}
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+        <section className="relative w-full h-screen overflow-hidden">
           {/* Video Background */}
           {/* Mobile video */}
           <video
@@ -49,37 +49,42 @@ export default async function Home() {
           {/* Removed decorative particles on hero for a cleaner, clearer look */}
           
           {/* Main Content */}
-          <div className="relative z-30 mx-auto max-w-5xl text-center text-white px-4">
-            <div className="animate-fade-in-up">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-audiowide tracking-wider bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x shimmer-text">
-                Aroma Notes
-              </h1>
-            </div>
-            <div className="animate-fade-in-up delay-300">
-              <p className="mt-8 max-w-3xl mx-auto text-xl text-gray-100 leading-relaxed font-saira">
-                Where every scent tells a story. Discover our exclusive collection of artisanal perfumes, 
-                each bottle a masterpiece of olfactory artistry.
-              </p>
-            </div>
-            <div className="mt-12 animate-fade-in-up delay-500">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-saira text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
-                  <span className="relative z-10 font-saira uppercase">Explore Collection</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                </a>
-                <a className="group inline-block rounded-full border-2 border-amber-400/50 px-10 py-4 text-lg font-semibold font-saira text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
-                  <span className="relative z-8 font-saira uppercase">Our Story</span>
-                </a>
+          <div className="absolute inset-0 z-30 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl w-full text-center text-white">
+              <div className="animate-fade-in-up">
+                <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
+                  <span className="text-amber-300 text-sm font-medium tracking-wider uppercase font-saira">Exclusive Imports</span>
+                </div>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-audiowide tracking-wider bg-gradient-to-r from-white via-amber-100 to-rose-100 bg-clip-text text-transparent animate-gradient-x shimmer-text">
+                  Aroma Notes
+                </h1>
               </div>
-            </div>
-            
-            {/* Perfume Bottle Icon */}
-            <div className="mt-16 animate-bounce-subtle">
-              <div className="inline-block p-4 bg-gradient-to-b from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
-                <svg className="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
-                </svg>
+              <div className="animate-fade-in-up delay-300">
+                <p className="mt-6 sm:mt-8 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed font-saira px-4">
+                  Where every scent tells a story. Discover our exclusive collection of artisanal perfumes, 
+                  each bottle a masterpiece of olfactory artistry.
+                </p>
+              </div>
+              <div className="mt-8 sm:mt-12 animate-fade-in-up delay-500">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a className="w-full sm:w-auto group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-bold font-saira text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
+                    <span className="relative z-10 font-saira uppercase">Explore Collection</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  </a>
+                  <a className="w-full sm:w-auto group inline-block rounded-full border-2 border-amber-400/50 px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold font-saira text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm" href="#about">
+                    <span className="relative z-8 font-saira uppercase">Our Story</span>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Perfume Bottle Icon */}
+              <div className="mt-12 sm:mt-16 animate-bounce-subtle">
+                <div className="inline-block p-3 sm:p-4 bg-gradient-to-b from-amber-500/20 to-rose-500/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
+                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
