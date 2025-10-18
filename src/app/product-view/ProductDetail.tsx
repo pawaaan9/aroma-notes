@@ -119,7 +119,7 @@ export default function ProductDetail({ product }: Props) {
               <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
               <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
             </svg>
-            <span>{hasItem(product._id) ? 'Added' : (isAdding ? 'Adding…' : 'Add to Cart')}</span>
+            <span className="font-saira">{hasItem(product._id) ? 'Added' : (isAdding ? 'Adding…' : 'Add to Cart')}</span>
           </button>
         </div>
       </div>
