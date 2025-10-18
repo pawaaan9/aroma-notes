@@ -76,6 +76,20 @@ export function selectDisplayPrice(product: SanityProduct): number | null {
   return Math.min(...effectivePrices);
 }
 
+export function select50mlVariant(product: SanityProduct): SanityVariant | null {
+  const variant50ml = product.variants?.find(v => v.size === '50ml');
+  return variant50ml ?? null;
+}
+
+export function select50mlPrice(product: SanityProduct): { discountPrice?: number | null; originalPrice?: number | null } {
+  const variant = select50mlVariant(product);
+  if (!variant) return {};
+  return {
+    discountPrice: variant.discountPrice,
+    originalPrice: variant.price
+  };
+}
+
 export async function fetchProductByIdOrSlug(idOrSlug: string): Promise<SanityProduct | null> {
   const query = `*[_type == "product" && (_id == $idOrSlug || slug.current == $idOrSlug)][0]{
     _id,

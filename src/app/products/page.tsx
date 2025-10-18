@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import MobileFilters from "../../components/MobileFilters";
 import HeroVideo from "../../components/HeroVideo";
 import Footer from "../../components/Footer";
-import { fetchProducts, selectDisplayPrice, selectPrimaryImage } from "@/lib/sanity";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select50mlPrice } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
 
 export default async function ProductsPage() {
@@ -86,21 +86,23 @@ export default async function ProductsPage() {
               <div className="grid grid-cols-2 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {products.map((product, index) => {
               const imageSrc = selectPrimaryImage(product) ?? "/yusuf-bhai.webp";
-              const priceNumber = selectDisplayPrice(product);
-              const displayPrice = priceNumber != null ? formatLkr(priceNumber) : "";
               const path = `/product-view/${product.slug?.current ?? product._id}`;
-                 const label = product.brand ? `INSPIRED BY ${product.brand.toUpperCase()}` : undefined;
+              const label = product.brand ? product.brand.toUpperCase() : undefined;
+              const { originalPrice, discountPrice } = select50mlPrice(product);
+              const display50mlPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
+              const displayOriginalPrice = originalPrice != null ? formatLkr(originalPrice) : undefined;
               return (
                 <div key={product._id}>
                   <ProductCard
                     name={product.name}
-                    price={displayPrice}
+                    price={display50mlPrice}
+                    originalPrice={displayOriginalPrice}
                     imageSrc={imageSrc}
                     imageAlt={product.name}
                     delay={`delay-${(index + 1) * 100}`}
                     showQuickAdd={true}
                     href={path}
-                       label={label}
+                    label={label}
                   />
                 </div>
               );

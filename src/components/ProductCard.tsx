@@ -6,6 +6,7 @@ interface ProductCardProps {
   name: string;
   description?: string;
   price: string;
+  originalPrice?: string;
   imageSrc: string;
   imageAlt: string;
   delay?: string;
@@ -18,6 +19,7 @@ export default function ProductCard({
   name, 
   description, 
   price, 
+  originalPrice,
   imageSrc, 
   imageAlt, 
   delay = "delay-100",
@@ -31,7 +33,7 @@ export default function ProductCard({
       <div className={`group relative animate-fade-in-up ${delay}`}>
         <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 relative">
           {label ? (
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-3 py-1 rounded bg-gray-900/90 text-white text-[10px] tracking-widest uppercase shadow">
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-1.5 py-0.5 rounded bg-gray-900/90 text-white text-[7px] tracking-normal uppercase shadow whitespace-nowrap">
               {label}
             </div>
           ) : null}
@@ -44,12 +46,17 @@ export default function ProductCard({
           />
           {/* Removed floating view pill on hover over image */}
         </div>
-        <div className="mt-4 flex items-start justify-between gap-4">
-          <div>
-            <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">
-              {name}
-            </h3>
-            <p className="mt-1 text-sm text-primary font-medium">
+        <div className="mt-4 flex flex-col">
+          <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">
+            {name}
+          </h3>
+          <div className="mt-2 flex items-center gap-2">
+            {originalPrice && (
+              <span className="text-sm line-through text-gray-400 font-medium">
+                {originalPrice}
+              </span>
+            )}
+            <p className="text-base font-bold text-primary">
               {price}
             </p>
           </div>
@@ -71,7 +78,7 @@ export default function ProductCard({
       <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
           {label ? (
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-3 py-1 rounded bg-gray-900/90 text-white text-[10px] tracking-widest uppercase shadow">
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-1.5 py-0.5 rounded bg-gray-900/90 text-white text-[7px] tracking-normal uppercase shadow whitespace-nowrap">
               {label}
             </div>
           ) : null}
@@ -100,7 +107,14 @@ export default function ProductCard({
               </p>
             ) : null}
           </div>
-          <p className="text-base font-bold text-primary mt-2 sm:mt-1 sm:text-right sm:whitespace-nowrap">{price}</p>
+          <div className="flex flex-col items-start sm:items-end">
+            {originalPrice && (
+              <p className="text-sm line-through text-gray-400 font-medium">
+                {originalPrice}
+              </p>
+            )}
+            <p className="text-base font-bold text-primary">{price}</p>
+          </div>
         </div>
         <div className="pt-1">
           <div className="group w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-400/60 bg-white text-amber-700 font-semibold py-2.5 px-4 transition-all duration-300 hover:border-rose-400 hover:text-rose-600">

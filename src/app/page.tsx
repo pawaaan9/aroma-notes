@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { fetchProducts, selectDisplayPrice, selectPrimaryImage } from "@/lib/sanity";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select50mlPrice } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
 
 export default async function Home() {
@@ -64,7 +64,7 @@ export default async function Home() {
             </div>
             <div className="mt-12 animate-fade-in-up delay-500">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="#products">
+                <a className="group inline-block rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-10 py-4 text-lg font-bold font-poppins text-white shadow-2xl transition-all duration-300 hover:shadow-amber-500/25 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 relative overflow-hidden" href="/products">
                   <span className="relative z-10">Explore Collection</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -107,19 +107,23 @@ export default async function Home() {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
               {featured.map((p, idx) => {
                 const imageSrc = selectPrimaryImage(p) ?? "/yusuf-bhai.webp";
-                const priceNumber = selectDisplayPrice(p);
-                const displayPrice = priceNumber != null ? formatLkr(priceNumber) : "";
                 const path = `/product-view/${p.slug?.current ?? p._id}`;
+                const label = p.brand ? p.brand.toUpperCase() : undefined;
+                const { originalPrice, discountPrice } = select50mlPrice(p);
+                const display50mlPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
+                const displayOriginalPrice = originalPrice != null ? formatLkr(originalPrice) : undefined;
                 return (
                   <div key={p._id}>
                     <ProductCard
                       name={p.name}
-                      description={p.brand ?? undefined}
-                      price={displayPrice}
+                      price={display50mlPrice}
+                      originalPrice={displayOriginalPrice}
                       imageSrc={imageSrc}
                       imageAlt={p.name}
                       delay={`delay-${(idx + 1) * 100}`}
+                      showQuickAdd={true}
                       href={path}
+                      label={label}
                     />
                   </div>
                 );
