@@ -72,9 +72,9 @@ export default function ProductCard({
   // Home page layout with overlay details
   const CardInner = (
     <div className={`group relative animate-fade-in-up ${delay}`}> 
-      {/* Hover gradient frame using brand colors */}
-      <div className="pointer-events-none absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-amber-500/40 to-rose-500/40 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></div>
-      <div className="relative rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 transform group-hover:shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-400/60 group-hover:-translate-y-1">
+      {/* Outer border frame on hover */}
+      <div className="absolute -inset-1 rounded-xl border-2 border-transparent group-hover:border-yellow-400 transition-all duration-500 pointer-events-none"></div>
+      <div className="relative rounded-xl border-2 border-gray-200 bg-white shadow-sm transition-all duration-500 transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-yellow-400/40 group-hover:border-yellow-400">
       <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
           {label ? (

@@ -126,7 +126,7 @@ export default function FAQ() {
         {/* Contact CTA */}
         <div className="mx-auto max-w-3xl mt-16 text-center p-8 rounded-lg bg-gradient-to-r from-amber-50 to-rose-50 border border-amber-200/50 animate-fade-in-up">
           <h3 className="text-xl font-semibold text-gray-900 mb-3">
-            Didn't find your answer?
+            Didn&apos;t find your answer?
           </h3>
           <p className="text-gray-700 mb-5">
             Our customer service team is here to help! Feel free to reach out through WhatsApp or contact us directly.
