@@ -10,8 +10,10 @@ export default async function ProductsPage() {
   const products = await fetchProducts();
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white animate-fade-in-up">
-      <Header />
+    <div className="flex min-h-screen w-full flex-col animate-fade-in-up">
+      <div className="absolute top-0 left-0 right-0 z-50">
+        <Header currentPage="products" />
+      </div>
       
       <main className="flex-grow relative">
         <div className="relative z-20">

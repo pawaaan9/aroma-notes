@@ -5,8 +5,10 @@ import FAQ from "@/components/FAQ";
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-white animate-fade-in-up">
-      <Header />
+    <div className="flex min-h-screen flex-col animate-fade-in-up">
+      <div className="absolute top-0 left-0 right-0 z-50">
+        <Header currentPage="about" />
+      </div>
 
       <main className="flex-grow">
         {/* Shared hero video across screens */}
