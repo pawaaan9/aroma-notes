@@ -78,7 +78,7 @@ export default function AboutPage() {
                   At Aroma Notes, we are dedicated to bringing world-class
                   fragrances with exceptional quality, longevity, and
                   sophistication to those who appreciate true perfume artistry.
-                  Imported by Yusuf Bhai with passion and expertise.
+                  Imported from Yusuf Bhai with passion and expertise.
                 </p>
               </div>
             </div>
@@ -173,13 +173,13 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-[5vw] relative z-10">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-              <div className="group text-center animate-fade-in-up delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="group min-w-0 text-center animate-fade-in-up delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira uppercase">
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira uppercase">
                     100%
                   </div>
-                  <div className="absolute inset-0 text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase">
+                  <div className="absolute inset-0 text-4xl sm:text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase">
                     100%
                   </div>
                 </div>
@@ -189,12 +189,12 @@ export default function AboutPage() {
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
 
-              <div className="group text-center animate-fade-in-up delay-200 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <div className="group min-w-0 text-center animate-fade-in-up delay-200 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira uppercase">
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira uppercase">
                     50+
                   </div>
-                  <div className="absolute inset-0 text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase">
+                  <div className="absolute inset-0 text-4xl sm:text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase">
                     50+
                   </div>
                 </div>
@@ -204,12 +204,12 @@ export default function AboutPage() {
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
 
-              <div className="group text-center animate-fade-in-up delay-300 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <div className="group min-w-0 text-center animate-fade-in-up delay-300 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira ">
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 animate-count-up font-saira ">
                     6-8h
                   </div>
-                  <div className="absolute inset-0 text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira ">
+                  <div className="absolute inset-0 text-4xl sm:text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira ">
                     6-8h
                   </div>
                 </div>
@@ -219,12 +219,12 @@ export default function AboutPage() {
                 <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-primary to-orange-600 group-hover:w-full transition-all duration-500 mx-auto"></div>
               </div>
 
-              <div className="group text-center animate-fade-in-up delay-500 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <div className="group min-w-0 text-center animate-fade-in-up delay-500 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <div className="relative">
-                  <div className="text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 font-saira uppercase">
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 group-hover:text-orange-400 transition-colors duration-300 font-saira uppercase break-words leading-tight">
                     Timeless
                   </div>
-                  <div className="absolute inset-0 text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase">
+                  <div className="absolute inset-0 text-4xl sm:text-5xl font-bold text-primary/20 mb-2 animate-pulse font-saira uppercase break-words leading-tight">
                     Timeless
                   </div>
                 </div>
