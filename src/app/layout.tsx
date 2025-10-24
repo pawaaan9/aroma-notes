@@ -37,10 +37,22 @@ const audiowide = Audiowide({
 });
 
 export const metadata: Metadata = {
-  title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
+  title: "Aroma Notes - Exclusive imports from Yusuf Bhai",
   description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes and signature fragrances, each bottle a masterpiece of olfactory artistry. Hand-crafted with passion, precision, and the finest ingredients from around the world.",
   keywords: "luxury perfume, signature fragrances, artisanal perfumery, exclusive scents, premium fragrances, Aroma Notes",
   authors: [{ name: "Aroma Notes" }],
+  icons: {
+    icon: [
+      { url: "/logo-2.png" },
+      { url: "/logo-2.png", rel: "icon" },
+    ],
+    shortcut: [
+      { url: "/logo-2.png" },
+    ],
+    apple: [
+      { url: "/logo-2.png" },
+    ],
+  },
   openGraph: {
     title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
     description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes.",
