@@ -90,6 +90,20 @@ export function select50mlPrice(product: SanityProduct): { discountPrice?: numbe
   };
 }
 
+export function select100mlVariant(product: SanityProduct): SanityVariant | null {
+  const variant100ml = product.variants?.find(v => v.size === '100ml');
+  return variant100ml ?? null;
+}
+
+export function select100mlPrice(product: SanityProduct): { discountPrice?: number | null; originalPrice?: number | null } {
+  const variant = select100mlVariant(product);
+  if (!variant) return {};
+  return {
+    discountPrice: variant.discountPrice,
+    originalPrice: variant.price
+  };
+}
+
 export async function fetchProductByIdOrSlug(idOrSlug: string): Promise<SanityProduct | null> {
   const query = `*[_type == "product" && (_id == $idOrSlug || slug.current == $idOrSlug)][0]{
     _id,

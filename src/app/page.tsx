@@ -1,7 +1,7 @@
 import ProductCard from "@/components/ProductCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select50mlPrice } from "@/lib/sanity";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select100mlPrice } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
 
 export default async function Home() {
@@ -113,14 +113,14 @@ export default async function Home() {
                 const imageSrc = selectPrimaryImage(p) ?? "/yusuf-bhai.webp";
                 const path = `/product-view/${p.slug?.current ?? p._id}`;
                 const label = p.brand ? p.brand.toUpperCase() : undefined;
-                const { originalPrice, discountPrice } = select50mlPrice(p);
-                const display50mlPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
-                const displayOriginalPrice = originalPrice != null ? formatLkr(originalPrice) : undefined;
+                const { originalPrice, discountPrice } = select100mlPrice(p);
+                const displayPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
+                const displayOriginalPrice = discountPrice != null && originalPrice != null ? formatLkr(originalPrice) : undefined;
                 return (
                   <div key={p._id}>
                     <ProductCard
                       name={p.name}
-                      price={display50mlPrice}
+                      price={displayPrice}
                       originalPrice={displayOriginalPrice}
                       imageSrc={imageSrc}
                       imageAlt={p.name}

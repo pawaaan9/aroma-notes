@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import MobileFilters from "../../components/MobileFilters";
 import HeroVideo from "../../components/HeroVideo";
 import Footer from "../../components/Footer";
-import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select50mlPrice } from "@/lib/sanity";
+import { fetchProducts, selectDisplayPrice, selectPrimaryImage, select100mlPrice } from "@/lib/sanity";
 import { formatLkr } from "@/utils/currency";
 
 export default async function ProductsPage() {
@@ -27,6 +27,10 @@ export default async function ProductsPage() {
             {/* Sidebar filters visible on desktop only */}
             <aside className="hidden lg:block lg:col-span-3">
               <div className="sticky top-28 space-y-10">
+                {/* Heading */}
+                <div>
+                  <h3 className="text-sm font-semibold tracking-[0.2em] text-gray-800">FILTERS</h3>
+                </div>
                 {/* Availability */}
                 <div>
                   <div className="mb-3 flex items-center justify-between">
@@ -92,14 +96,14 @@ export default async function ProductsPage() {
               const imageSrc = selectPrimaryImage(product) ?? "/yusuf-bhai.webp";
               const path = `/product-view/${product.slug?.current ?? product._id}`;
               const label = product.brand ? product.brand.toUpperCase() : undefined;
-              const { originalPrice, discountPrice } = select50mlPrice(product);
-              const display50mlPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
-              const displayOriginalPrice = originalPrice != null ? formatLkr(originalPrice) : undefined;
+              const { originalPrice, discountPrice } = select100mlPrice(product);
+              const displayPrice = discountPrice != null ? formatLkr(discountPrice) : (originalPrice != null ? formatLkr(originalPrice) : "");
+              const displayOriginalPrice = discountPrice != null && originalPrice != null ? formatLkr(originalPrice) : undefined;
               return (
                 <div key={product._id}>
                   <ProductCard
                     name={product.name}
-                    price={display50mlPrice}
+                    price={displayPrice}
                     originalPrice={displayOriginalPrice}
                     imageSrc={imageSrc}
                     imageAlt={product.name}
