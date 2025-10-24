@@ -29,7 +29,7 @@ export default async function ProductsPage() {
               <div className="sticky top-28 space-y-10">
                 {/* Heading */}
                 <div>
-                  <h3 className="text-sm font-semibold tracking-[0.2em] text-gray-800">FILTERS</h3>
+                  <h3 className="text-lg font-semibold tracking-[0.2em] text-gray-800">FILTERS</h3>
                 </div>
                 {/* Availability */}
                 <div>
