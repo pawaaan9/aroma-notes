@@ -1,4 +1,5 @@
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,26 +10,22 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-[5vw]">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
+            <Link className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="/about">
               <span className="relative z-10 font-saira uppercase">About</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10 font-saira uppercase">Contact</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
-              <span className="relative z-10 font-saira uppercase">FAQ</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
+            </Link>
+            <Link className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="/privacy">
               <span className="relative z-10 font-saira uppercase">Privacy</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="#">
+            </Link>
+            <Link className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="/terms">
               <span className="relative z-10 font-saira uppercase">Terms</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-            </a>
+            </Link>
+            <Link className="text-sm text-gray-600 hover:text-primary transition-all duration-300 relative group font-saira" href="/return-policy">
+              <span className="relative z-10 font-saira uppercase">Return Policy</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
+            </Link>
           </div>
           <div className="flex justify-center gap-4">
             <a className="text-gray-600 hover:text-primary transition-all duration-300 hover:scale-110" href="https://www.instagram.com/aroma.notes_?igsh=aGRjdW1oYzQ1ZmJh" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
