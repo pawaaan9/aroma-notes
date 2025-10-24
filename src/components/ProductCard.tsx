@@ -31,7 +31,7 @@ export default function ProductCard({
     // Products page layout with Quick Add button
     const CardInner = (
       <div className={`group relative animate-fade-in-up ${delay}`}>
-        <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 relative">
+        <div className="aspect-[4/5] w-full max-h-[380px] overflow-hidden rounded-lg bg-gray-200 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 relative">
           {label ? (
             <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-1.5 py-0.5 rounded bg-gray-900/90 text-white text-[7px] tracking-normal uppercase shadow whitespace-nowrap">
               {label}
@@ -46,17 +46,17 @@ export default function ProductCard({
           />
           {/* Removed floating view pill on hover over image */}
         </div>
-        <div className="mt-4 flex flex-col">
-          <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 font-saira">
+        <div className="mt-3 flex flex-col">
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 font-saira line-clamp-1 sm:line-clamp-2">
             {name}
           </h3>
-          <div className="mt-2 flex items-center gap-2">
+          <div className="mt-1 flex items-center gap-2">
             {originalPrice && (
-              <span className="text-sm line-through text-gray-400 font-medium font-saira">
+              <span className="text-xs sm:text-sm line-through text-gray-400 font-medium font-saira whitespace-nowrap">
                 {originalPrice}
               </span>
             )}
-            <p className="text-base font-bold text-primary font-saira">
+            <p className="text-sm sm:text-base font-bold text-primary font-saira whitespace-nowrap">
               {price}
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function ProductCard({
       {/* Outer border frame on hover */}
       <div className="absolute -inset-1 rounded-xl border-2 border-transparent group-hover:border-yellow-400 transition-all duration-500 pointer-events-none"></div>
       <div className="relative rounded-xl border-2 border-gray-200 bg-white shadow-sm transition-all duration-500 transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-yellow-400/40 group-hover:border-yellow-400">
-      <div className="aspect-[1/1] sm:aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
+      <div className="aspect-[4/5] w-full max-h-[360px] overflow-hidden rounded-t-xl bg-gray-100">
         <div className="relative overflow-hidden h-full">
           {label ? (
             <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 px-1.5 py-0.5 rounded bg-gray-900/90 text-white text-[7px] tracking-normal uppercase shadow whitespace-nowrap">
@@ -98,22 +98,22 @@ export default function ProductCard({
       <div className="p-4 space-y-2">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 line-clamp-1 sm:line-clamp-2">
               {name}
             </h3>
             {description ? (
-              <p className="mt-1 text-sm text-gray-600 line-clamp-2">
+              <p className="mt-1 text-xs sm:text-sm text-gray-600 line-clamp-2">
                 {description}
               </p>
             ) : null}
           </div>
           <div className="flex flex-col items-start sm:items-end">
             {originalPrice && (
-              <p className="text-sm line-through text-gray-400 font-medium">
+              <p className="text-xs sm:text-sm line-through text-gray-400 font-medium whitespace-nowrap">
                 {originalPrice}
               </p>
             )}
-            <p className="text-base font-bold text-primary font-saira">{price}</p>
+            <p className="text-sm sm:text-base font-bold text-primary font-saira whitespace-nowrap">{price}</p>
           </div>
         </div>
         <div className="pt-1">
