@@ -46,11 +46,19 @@ export default function VariantSelector({ variants, value, onChange }: VariantSe
         })}
       </div>
       <div className="mt-3 flex items-center gap-3">
-        {selected ? (
-          <span className={`text-sm font-medium ${selected.inStock === false ? "text-rose-600" : "text-emerald-600"}`}>
-            {selected.inStock === false ? "Out of stock" : "In stock"}
-          </span>
-        ) : null}
+        {(() => {
+          if (selected) {
+            return (
+              <span className={`text-sm font-medium ${selected.inStock === false ? "text-red-600" : "text-green-600"}`}>
+                {selected.inStock === false ? "Out of stock" : "In stock"}
+              </span>
+            );
+          }
+          const allOut = inOrder.length > 0 && inOrder.every((v) => v.inStock === false);
+          return allOut ? (
+            <span className="text-sm font-medium text-red-600">Out of stock</span>
+          ) : null;
+        })()}
       </div>
       {price != null ? (
         <div className="mt-2">

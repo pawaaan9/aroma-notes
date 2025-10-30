@@ -18,6 +18,7 @@ export default function ProductDetail({ product }: Props) {
 
   const selected = selectedIdx >= 0 ? (variants[selectedIdx] ?? null) : null;
   const imageSrc = selected?.photoUrl || product.coverImageUrl || "/yusuf-bhai.webp";
+  const allOut = useMemo(() => (variants.length > 0 && variants.every(v => v.inStock === false)), [variants]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -61,7 +62,9 @@ export default function ProductDetail({ product }: Props) {
 
         <div className="mt-10">
           <button
+            disabled={allOut}
             onClick={() => {
+              if (allOut) return;
               setIsAdding(true);
               try {
                 // pick selected variant metadata for cart
@@ -104,7 +107,7 @@ export default function ProductDetail({ product }: Props) {
               }
             }}
             aria-busy={isAdding}
-            className={`group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-saira font-semibold text-white transition-all duration-200 bg-primary hover:bg-primary/90 border border-primary/30 hover:border-primary/50 shadow-sm hover:shadow ${isAdding ? 'scale-95' : 'hover:scale-105'}`}
+            className={`group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-saira font-semibold text-white transition-all duration-200 bg-primary hover:bg-primary/90 border border-primary/30 hover:border-primary/50 shadow-sm hover:shadow disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary ${isAdding ? 'scale-95' : 'hover:scale-105'}`}
           >
             {/* Cart icon */}
             <svg
@@ -119,7 +122,7 @@ export default function ProductDetail({ product }: Props) {
               <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
               <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
             </svg>
-            <span className="font-saira">{isAdding ? 'Adding…' : 'Add to Cart'}</span>
+            <span className="font-saira">{allOut ? 'Out of stock' : (isAdding ? 'Adding…' : 'Add to Cart')}</span>
           </button>
         </div>
       </div>
