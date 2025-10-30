@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideo from "@/components/HeroVideo";
 import FAQ from "@/components/FAQ";
+import aboutImage from "@/assets/about.jpg";
 
 export default function AboutPage() {
   return (
@@ -51,10 +52,7 @@ export default function AboutPage() {
                 <div className="h-80 w-full overflow-hidden rounded-xl shadow-2xl group">
                   <div
                     className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{
-                      backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrQPLBdY6vvKhEVW1qYvK0Cwe39XP_qw_hpkD3ZoA9R5c6eC6LkilmZfgPp7w-ZDwF8CpOopwQ5rXawf0Gpgh9wkMt1GqZ1Xo4LsLrpmUy_-qEwvoSHjZ3OOurkBP_RudEQmtiMtes6Xj1p81P08tKh5_3SJbU2yPl_bF2EdYfQEY3-yAipxjXneF6SvSNmsOqEU7UG-0_WetLTh_zsH2DYQTUdVQiby332_IWZMmyQ50qzc-wBYq2ENwsCq1JQNE8-j-0412JQjM")',
-                    }}
+                    style={{ backgroundImage: `url(${aboutImage.src})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

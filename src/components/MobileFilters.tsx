@@ -3,7 +3,31 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-export default function MobileFilters() {
+type GenderKey = "female" | "male" | "unisex";
+
+export default function MobileFilters({
+  inStockOnly,
+  setInStockOnly,
+  priceMin,
+  priceMax,
+  setPriceMin,
+  setPriceMax,
+  gender,
+  setGender,
+  perfumeType,
+  setPerfumeType,
+}: {
+  inStockOnly: boolean;
+  setInStockOnly: (v: boolean) => void;
+  priceMin: number | undefined;
+  priceMax: number | undefined;
+  setPriceMin: (v: number | undefined) => void;
+  setPriceMax: (v: number | undefined) => void;
+  gender: Record<GenderKey, boolean>;
+  setGender: (v: Record<GenderKey, boolean>) => void;
+  perfumeType: { originals: boolean; inspired: boolean };
+  setPerfumeType: (v: { originals: boolean; inspired: boolean }) => void;
+}) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -70,7 +94,12 @@ export default function MobileFilters() {
                     <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">AVAILABILITY</h4>
                   </div>
                   <label className="flex items-center gap-3 text-sm text-gray-700 font-saira">
-                    <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary font-saira" />
+                    <input
+                      type="checkbox"
+                      className="h-4 w-4 rounded border-gray-300 accent-primary font-saira"
+                      checked={inStockOnly}
+                      onChange={(e) => setInStockOnly(e.target.checked)}
+                    />
                     In stock only
                   </label>
                 </section>
@@ -80,13 +109,26 @@ export default function MobileFilters() {
                   <div className="mb-3 flex items-center justify-between">
                     <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">PRICE</h4>
                   </div>
-                  <div className="py-2">
-                    <input type="range" min={0} max={400} defaultValue={200} className="w-full accent-primary" />
-                  </div>
                   <div className="flex items-center gap-3">
-                    <input className="w-24 rounded-md border border-gray-300 px-3 py-2 text-sm" placeholder="Min" />
+                    <input
+                      type="number"
+                      min={0}
+                      className="w-32 rounded-md border border-gray-300 bg-white text-gray-900 placeholder-gray-400 px-3 py-2 text-sm focus:border-primary focus:ring-2 focus:ring-primary/30"
+                      placeholder="Min"
+                      inputMode="numeric"
+                      value={priceMin ?? ""}
+                      onChange={(e) => setPriceMin(e.target.value ? Number(e.target.value) : undefined)}
+                    />
                     <span className="text-gray-400">to</span>
-                    <input className="w-24 rounded-md border border-gray-300 px-3 py-2 text-sm" placeholder="Max" />
+                    <input
+                      type="number"
+                      min={0}
+                      className="w-32 rounded-md border border-gray-300 bg-white text-gray-900 placeholder-gray-400 px-3 py-2 text-sm focus:border-primary focus:ring-2 focus:ring-primary/30"
+                      placeholder="Max"
+                      inputMode="numeric"
+                      value={priceMax ?? ""}
+                      onChange={(e) => setPriceMax(e.target.value ? Number(e.target.value) : undefined)}
+                    />
                   </div>
                 </section>
 
@@ -96,9 +138,33 @@ export default function MobileFilters() {
                     <h4 className="text-xs font-semibold tracking-[0.2em] text-gray-700">GENDER</h4>
                   </div>
                   <div className="space-y-2 text-sm text-gray-700 font-saira">
-                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Female</label>
-                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Male</label>
-                    <label className="flex items-center gap-3"><input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Unisex</label>
+                    <label className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 accent-primary"
+                        checked={gender.female}
+                        onChange={(e) => setGender({ ...gender, female: e.target.checked })}
+                      />
+                      Female
+                    </label>
+                    <label className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 accent-primary"
+                        checked={gender.male}
+                        onChange={(e) => setGender({ ...gender, male: e.target.checked })}
+                      />
+                      Male
+                    </label>
+                    <label className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 accent-primary"
+                        checked={gender.unisex}
+                        onChange={(e) => setGender({ ...gender, unisex: e.target.checked })}
+                      />
+                      Unisex
+                    </label>
                   </div>
                 </section>
 
@@ -109,10 +175,22 @@ export default function MobileFilters() {
                   </div>
                   <div className="space-y-2 text-sm text-gray-700 font-saira">
                     <label className="flex items-center gap-3">
-                      <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> YB Originals
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 accent-primary"
+                        checked={perfumeType.originals}
+                        onChange={(e) => setPerfumeType({ ...perfumeType, originals: e.target.checked })}
+                      />
+                      YB Originals
                     </label>
                     <label className="flex items-center gap-3">
-                      <input type="checkbox" className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" /> Inspired
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 accent-primary"
+                        checked={perfumeType.inspired}
+                        onChange={(e) => setPerfumeType({ ...perfumeType, inspired: e.target.checked })}
+                      />
+                      Inspired
                     </label>
                   </div>
                 </section>
