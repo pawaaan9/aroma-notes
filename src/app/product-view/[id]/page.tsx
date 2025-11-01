@@ -81,24 +81,29 @@ export async function generateMetadata(
   }
   const title = `${product.name}${product.brand ? ` by ${product.brand}` : ''}`;
   const description = product.descriptionText ?? 'Discover this artisan fragrance at Aroma Notes.';
-  const image = selectPrimaryImage(product) ?? '/yusuf-bhai.webp';
+  const rawImage = selectPrimaryImage(product) ?? '/yusuf-bhai.webp';
   const urlPath = `/product-view/${product.slug?.current ?? product._id}`;
+  // Prefer a 1200x630 crop for optimal social share ratio when using Sanity CDN images
+  const image = rawImage.startsWith('https://cdn.sanity.io')
+    ? `${rawImage}${rawImage.includes('?') ? '&' : '?'}w=1200&h=630&fit=crop&auto=format`
+    : rawImage;
+  const longTitle = `${title} | Aroma Notes Sri Lanka`;
   return {
-    title,
+    title: longTitle,
     description,
     alternates: { canonical: urlPath },
     openGraph: {
-      title,
+      title: longTitle,
       description,
       type: 'website',
       url: urlPath,
       images: [
-        { url: image, width: 1200, height: 630, alt: title },
+        { url: image, width: 1200, height: 630, alt: longTitle },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: longTitle,
       description,
       images: [image],
     },
