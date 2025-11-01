@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideo from "@/components/HeroVideo";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "Review the terms that govern your use of Aroma Notes.",
+  alternates: { canonical: "/terms" },
+  openGraph: {
+    url: "/terms",
+    title: "Terms & Conditions | Aroma Notes",
+    description: "Review the terms that govern your use of Aroma Notes.",
+  },
+  twitter: {
+    title: "Terms & Conditions | Aroma Notes",
+    description: "Review the terms that govern your use of Aroma Notes.",
+    card: "summary",
+  },
+};
 
 export default function TermsPage() {
   return (

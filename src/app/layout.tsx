@@ -37,14 +37,30 @@ const audiowide = Audiowide({
 });
 
 export const metadata: Metadata = {
-  title: "Aroma Notes - Exclusive imports from Yusuf Bhai",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  applicationName: "Aroma Notes",
+  title: {
+    default: "Aroma Notes - Exclusive imports from Yusuf Bhai",
+    template: "%s | Aroma Notes"
+  },
   description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes and signature fragrances, each bottle a masterpiece of olfactory artistry. Hand-crafted with passion, precision, and the finest ingredients from around the world.",
-  keywords: "luxury perfume, signature fragrances, artisanal perfumery, exclusive scents, premium fragrances, Aroma Notes",
+  keywords: [
+    "luxury perfume",
+    "signature fragrances",
+    "artisanal perfumery",
+    "exclusive scents",
+    "premium fragrances",
+    "Aroma Notes",
+  ],
   authors: [{ name: "Aroma Notes" }],
+  alternates: {
+    canonical: '/',
+  },
+  category: 'ecommerce',
   icons: {
     icon: [
       { url: "/logo-2.png" },
-      { url: "/logo-2.png", rel: "icon" },
+      { url: "/favicon.ico", rel: "icon" },
     ],
     shortcut: [
       { url: "/logo-2.png" },
@@ -58,7 +74,38 @@ export const metadata: Metadata = {
     description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes.",
     type: "website",
     locale: "en_US",
+    url: '/',
+    siteName: 'Aroma Notes',
+    images: [
+      { url: "/yusuf-bhai.webp", width: 1200, height: 630, alt: "Aroma Notes" },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@aromanotes',
+    creator: '@aromanotes',
+    title: "Aroma Notes - Luxury Perfumery & Signature Fragrances",
+    description: "Where every scent tells a story. Discover our exclusive collection of artisanal perfumes.",
+    images: [
+      "/yusuf-bhai.webp",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
+    },
+  },
+  manifest: '/site.webmanifest',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#111827' },
+  ],
 };
 
 export default function RootLayout({

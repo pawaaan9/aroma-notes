@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideo from "@/components/HeroVideo";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Learn how Aroma Notes collects, uses, and protects your data.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    url: "/privacy",
+    title: "Privacy Policy | Aroma Notes",
+    description: "Learn how we collect, use, and protect your data.",
+  },
+  twitter: {
+    title: "Privacy Policy | Aroma Notes",
+    description: "Learn how we collect, use, and protect your data.",
+    card: "summary",
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (

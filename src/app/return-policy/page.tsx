@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideo from "@/components/HeroVideo";
+
+export const metadata: Metadata = {
+  title: "Return & Exchange Policy",
+  description: "Review Aroma Notes' return and exchange terms for your purchases.",
+  alternates: { canonical: "/return-policy" },
+  openGraph: {
+    url: "/return-policy",
+    title: "Return & Exchange Policy | Aroma Notes",
+    description: "We strive for your satisfaction. Review our return and exchange terms.",
+  },
+  twitter: {
+    title: "Return & Exchange Policy | Aroma Notes",
+    description: "We strive for your satisfaction. Review our return and exchange terms.",
+    card: "summary",
+  },
+};
 
 export default function ReturnPolicyPage() {
   return (

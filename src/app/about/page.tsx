@@ -1,8 +1,29 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideo from "@/components/HeroVideo";
 import FAQ from "@/components/FAQ";
 import aboutImage from "@/assets/about.jpg";
+
+export const metadata: Metadata = {
+  title: "About Aroma Notes",
+  description: "Aroma Notes is a luxury fragrance house in Sri Lanka importing world-class handmade perfumes crafted by Yusuf Bhai. Experience authentic craftsmanship, elegance, and exceptional longevity.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: "/about",
+    title: "About Aroma Notes",
+    description: "Discover our story and commitment to luxury artisan fragrances.",
+    images: [
+      { url: "/yusuf-bhai.webp", width: 1200, height: 630, alt: "Aroma Notes" },
+    ],
+  },
+  twitter: {
+    title: "About Aroma Notes",
+    description: "Discover our story and commitment to luxury artisan fragrances.",
+    card: "summary_large_image",
+    images: ["/yusuf-bhai.webp"],
+  },
+};
 
 export default function AboutPage() {
   return (
